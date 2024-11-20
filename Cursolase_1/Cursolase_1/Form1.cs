@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -17,7 +18,7 @@ namespace Cursolase_1
         {
             InitializeComponent();
         }
-        
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -34,7 +35,7 @@ namespace Cursolase_1
             if (checkBox1.Checked)
             {
 
-            label1.Text = textBox1.Text;
+                label1.Text = textBox1.Text;
             }
         }
 
@@ -79,7 +80,7 @@ namespace Cursolase_1
         private void button4_Click(object sender, EventArgs e)
         {
             progressBar1.Visible = true;
-
+            label4.Visible = true;
             // Deshabilitar el botón para evitar clics múltiples
             button4.Enabled = false;
 
@@ -89,7 +90,7 @@ namespace Cursolase_1
 
         private void button5_Click(object sender, EventArgs e)
         {
-            progressBar1.Value = 0;
+            //progressBar1.Value = 0;
         }
 
         // Evento DoWork: Se ejecuta en un hilo en segundo plano
@@ -136,7 +137,7 @@ namespace Cursolase_1
                 MessageBox.Show("La tarea se completó correctamente.");
             }
 
-            
+
         }
 
 
@@ -148,8 +149,44 @@ namespace Cursolase_1
             {
                 backgroundWorker1.CancelAsync();
                 button4.Enabled = true;
+                label4.Visible = false;
 
             }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            label5.Text = dateTimePicker1.Value.ToString("yyyy-MM-dd  HH:mm:ss____") + DateTime.UtcNow.ToString("yyyy-MM-dd  HH:mm:ss____");
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            linkLabel2.LinkVisited = true;
+            Process.Start("https:\\www.google.com");
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                
+                    label6.Text = treeView1.SelectedNode.Text;
+
+                
+
+            }
+            catch (NullReferenceException)
+            {
+                
+               
+            }
+
+
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+            label7.Text = numericUpDown1.Value.ToString();
         }
     }
 }
