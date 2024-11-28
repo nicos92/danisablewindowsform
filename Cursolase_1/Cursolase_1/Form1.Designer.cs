@@ -29,25 +29,25 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.TreeNode treeNode45 = new System.Windows.Forms.TreeNode("vacio");
-            System.Windows.Forms.TreeNode treeNode46 = new System.Windows.Forms.TreeNode("asasdo", new System.Windows.Forms.TreeNode[] {
-            treeNode45});
-            System.Windows.Forms.TreeNode treeNode47 = new System.Windows.Forms.TreeNode("azucar");
-            System.Windows.Forms.TreeNode treeNode48 = new System.Windows.Forms.TreeNode("dulce de leche", new System.Windows.Forms.TreeNode[] {
-            treeNode47});
-            System.Windows.Forms.TreeNode treeNode49 = new System.Windows.Forms.TreeNode("Argentina", new System.Windows.Forms.TreeNode[] {
-            treeNode46,
-            treeNode48});
-            System.Windows.Forms.TreeNode treeNode50 = new System.Windows.Forms.TreeNode("choto");
-            System.Windows.Forms.TreeNode treeNode51 = new System.Windows.Forms.TreeNode("cordero");
-            System.Windows.Forms.TreeNode treeNode52 = new System.Windows.Forms.TreeNode("Uruguay", new System.Windows.Forms.TreeNode[] {
-            treeNode50,
-            treeNode51});
-            System.Windows.Forms.TreeNode treeNode53 = new System.Windows.Forms.TreeNode("Caipirinha");
-            System.Windows.Forms.TreeNode treeNode54 = new System.Windows.Forms.TreeNode("Picanha");
-            System.Windows.Forms.TreeNode treeNode55 = new System.Windows.Forms.TreeNode("Brasil", new System.Windows.Forms.TreeNode[] {
-            treeNode53,
-            treeNode54});
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("vacio");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("asasdo", new System.Windows.Forms.TreeNode[] {
+            treeNode1});
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("azucar");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("dulce de leche", new System.Windows.Forms.TreeNode[] {
+            treeNode3});
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Argentina", new System.Windows.Forms.TreeNode[] {
+            treeNode2,
+            treeNode4});
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("choto");
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("cordero");
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Uruguay", new System.Windows.Forms.TreeNode[] {
+            treeNode6,
+            treeNode7});
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Caipirinha");
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Picanha");
+            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Brasil", new System.Windows.Forms.TreeNode[] {
+            treeNode9,
+            treeNode10});
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -80,15 +80,17 @@
             this.label5 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.treeView1 = new System.Windows.Forms.TreeView();
-            this.label6 = new System.Windows.Forms.Label();
             this.button8 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.treeView1 = new System.Windows.Forms.TreeView();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label7 = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -101,6 +103,7 @@
             this.groupBox9.SuspendLayout();
             this.groupBox10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.groupBox11.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -466,16 +469,6 @@
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Link label";
             // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(16, 34);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(55, 13);
-            this.linkLabel1.TabIndex = 0;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "linkLabel1";
-            // 
             // linkLabel2
             // 
             this.linkLabel2.AutoSize = true;
@@ -486,6 +479,16 @@
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "linkLabel2";
             this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(16, 34);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(55, 13);
+            this.linkLabel1.TabIndex = 0;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "linkLabel1";
             // 
             // groupBox9
             // 
@@ -499,38 +502,15 @@
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Tree View";
             // 
-            // treeView1
+            // button8
             // 
-            this.treeView1.Location = new System.Drawing.Point(3, 16);
-            this.treeView1.Name = "treeView1";
-            treeNode45.Name = "Node9";
-            treeNode45.Text = "vacio";
-            treeNode46.Name = "Node3";
-            treeNode46.Text = "asasdo";
-            treeNode47.Name = "Node10";
-            treeNode47.Text = "azucar";
-            treeNode48.Name = "Node4";
-            treeNode48.Text = "dulce de leche";
-            treeNode49.Name = "Node0";
-            treeNode49.Text = "Argentina";
-            treeNode50.Name = "Node5";
-            treeNode50.Text = "choto";
-            treeNode51.Name = "Node6";
-            treeNode51.Text = "cordero";
-            treeNode52.Name = "Node1";
-            treeNode52.Text = "Uruguay";
-            treeNode53.Name = "Node7";
-            treeNode53.Text = "Caipirinha";
-            treeNode54.Name = "Node8";
-            treeNode54.Text = "Picanha";
-            treeNode55.Name = "Node2";
-            treeNode55.Text = "Brasil";
-            this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode49,
-            treeNode52,
-            treeNode55});
-            this.treeView1.Size = new System.Drawing.Size(121, 168);
-            this.treeView1.TabIndex = 0;
+            this.button8.Location = new System.Drawing.Point(49, 248);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(75, 23);
+            this.button8.TabIndex = 18;
+            this.button8.Text = "button8";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // label6
             // 
@@ -541,15 +521,38 @@
             this.label6.TabIndex = 17;
             this.label6.Text = "label6";
             // 
-            // button8
+            // treeView1
             // 
-            this.button8.Location = new System.Drawing.Point(49, 248);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
-            this.button8.TabIndex = 18;
-            this.button8.Text = "button8";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.treeView1.Location = new System.Drawing.Point(3, 16);
+            this.treeView1.Name = "treeView1";
+            treeNode1.Name = "Node9";
+            treeNode1.Text = "vacio";
+            treeNode2.Name = "Node3";
+            treeNode2.Text = "asasdo";
+            treeNode3.Name = "Node10";
+            treeNode3.Text = "azucar";
+            treeNode4.Name = "Node4";
+            treeNode4.Text = "dulce de leche";
+            treeNode5.Name = "Node0";
+            treeNode5.Text = "Argentina";
+            treeNode6.Name = "Node5";
+            treeNode6.Text = "choto";
+            treeNode7.Name = "Node6";
+            treeNode7.Text = "cordero";
+            treeNode8.Name = "Node1";
+            treeNode8.Text = "Uruguay";
+            treeNode9.Name = "Node7";
+            treeNode9.Text = "Caipirinha";
+            treeNode10.Name = "Node8";
+            treeNode10.Text = "Picanha";
+            treeNode11.Name = "Node2";
+            treeNode11.Text = "Brasil";
+            this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            treeNode5,
+            treeNode8,
+            treeNode11});
+            this.treeView1.Size = new System.Drawing.Size(121, 168);
+            this.treeView1.TabIndex = 0;
             // 
             // groupBox10
             // 
@@ -561,6 +564,15 @@
             this.groupBox10.TabIndex = 19;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Numeric up down";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(209, 23);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(35, 13);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "label7";
             // 
             // numericUpDown1
             // 
@@ -574,20 +586,30 @@
             this.numericUpDown1.ThousandsSeparator = true;
             this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
-            // label7
+            // groupBox11
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(209, 23);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 13);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "label7";
+            this.groupBox11.Controls.Add(this.richTextBox1);
+            this.groupBox11.Location = new System.Drawing.Point(415, 348);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Size = new System.Drawing.Size(299, 184);
+            this.groupBox11.TabIndex = 20;
+            this.groupBox11.TabStop = false;
+            this.groupBox11.Text = "Rich text box";
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(3, 16);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(290, 120);
+            this.richTextBox1.TabIndex = 0;
+            this.richTextBox1.Text = "";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1171, 614);
+            this.Controls.Add(this.groupBox11);
             this.Controls.Add(this.groupBox10);
             this.Controls.Add(this.groupBox9);
             this.Controls.Add(this.groupBox8);
@@ -625,6 +647,7 @@
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            this.groupBox11.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -672,6 +695,8 @@
         private System.Windows.Forms.GroupBox groupBox10;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.GroupBox groupBox11;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }
 
