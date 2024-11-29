@@ -54,5 +54,13 @@ namespace Curso_clase_2
                 groupBox6.BackColor = colorDialog1.Color;
             }
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (fontDialog1.ShowDialog() == DialogResult.OK)
+            {
+                this.Font = fontDialog1.Font;
+            }
+        }
     }
 }
