@@ -12,14 +12,10 @@ namespace Curso_clase_2
 {
     public partial class Form2 : Form
     {
-        public Form2()
+        public Form2(string valor)
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
+            label1.Text = valor;
         }
     }
 }

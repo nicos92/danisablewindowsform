@@ -29,8 +29,12 @@ namespace Curso_clase_2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2();
-            form2.Show();
+            if (textBox1.Text != string.Empty)
+            {
+
+                Form2 form2 = new Form2(textBox1.Text);
+                form2.Show();
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -48,7 +52,7 @@ namespace Curso_clase_2
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
+
             if (colorDialog1.ShowDialog() == DialogResult.OK)
             {
                 groupBox6.BackColor = colorDialog1.Color;
@@ -60,6 +64,29 @@ namespace Curso_clase_2
             if (fontDialog1.ShowDialog() == DialogResult.OK)
             {
                 this.Font = fontDialog1.Font;
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+
+                label13.Text = openFileDialog1.FileName;
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                label14.Text = saveFileDialog1.FileName;
+            }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            if (printDialog1.ShowDialog() == DialogResult.OK)
+            {
+                label15.Text = printDialog1.PrinterSettings.ToString();
             }
         }
     }
