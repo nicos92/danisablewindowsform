@@ -26,5 +26,33 @@ namespace Curso_clase_2
         {
             LblMenustrip.Text = "New";
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2();
+            form2.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("soy un cuadro de dialogo");
+            MessageBox.Show("soy un cuadro de dialogo con titulo de cuadro", "titulo de cuadro");
+            MessageBox.Show("soy un cuadro de dialogo con titulo de cuadro y botones", "titulo de cuadro", MessageBoxButtons.YesNoCancel);
+
+        }
+
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+            label10.Text = trackBar1.Value.ToString();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            
+            if (colorDialog1.ShowDialog() == DialogResult.OK)
+            {
+                groupBox6.BackColor = colorDialog1.Color;
+            }
+        }
     }
 }
