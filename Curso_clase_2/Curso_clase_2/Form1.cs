@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,6 +18,8 @@ namespace Curso_clase_2
         private int minutos = 0;
         private int horas = 0;
         private string ruta = "";
+        private SoundPlayer player = new SoundPlayer();
+
         public Form1()
         {
             InitializeComponent();
@@ -189,6 +192,63 @@ namespace Curso_clase_2
         {
             axWindowsMediaPlayer1.Ctlcontrols.pause();
 
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnBeep_Click(object sender, EventArgs e)
+        {
+            int frequency = 1500;
+            int duration = 200;
+            Console.Beep(frequency,duration);
+        }
+
+       
+        // no funcionan, por alguna razon,supongo que es Windows 11
+        private void button8_Click(object sender, EventArgs e)
+        {
+            System.Media.SystemSounds.Asterisk.Play();
+            System.Media.SystemSounds.Beep.Play();
+            System.Media.SystemSounds.Hand.Play();
+            System.Media.SystemSounds.Exclamation.Play();
+            System.Media.SystemSounds.Question.Play();
+
+
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                ruta = openFileDialog1.FileName;
+            }
+        }
+
+        private void BtnPlayNativo_Click(object sender, EventArgs e)
+        {
+            // solo repreoduce archivos WAV
+            player.SoundLocation = ruta;
+            player.Load();
+            player.Play();
+        }
+
+        private void BtnDetenerNativo_Click(object sender, EventArgs e)
+        {
+            player.Stop();
+        }
+
+        private void BtnPausaNativo_Click(object sender, EventArgs e)
+        {
+            // no tiene pausa
         }
     }
 }

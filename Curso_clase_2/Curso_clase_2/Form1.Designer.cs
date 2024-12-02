@@ -103,11 +103,21 @@
             this.BtnIniciar = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.groupBox12 = new System.Windows.Forms.GroupBox();
-            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
-            this.BtnAbrir = new System.Windows.Forms.Button();
-            this.BtnReproducir = new System.Windows.Forms.Button();
-            this.BtnDetenerRep = new System.Windows.Forms.Button();
             this.BtnPausa = new System.Windows.Forms.Button();
+            this.BtnDetenerRep = new System.Windows.Forms.Button();
+            this.BtnReproducir = new System.Windows.Forms.Button();
+            this.BtnAbrir = new System.Windows.Forms.Button();
+            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.groupBox13 = new System.Windows.Forms.GroupBox();
+            this.BtnBeep = new System.Windows.Forms.Button();
+            this.groupBox14 = new System.Windows.Forms.GroupBox();
+            this.button8 = new System.Windows.Forms.Button();
+            this.groupBox15 = new System.Windows.Forms.GroupBox();
+            this.BtnPausaNativo = new System.Windows.Forms.Button();
+            this.BtnDetenerNativo = new System.Windows.Forms.Button();
+            this.BtnPlayNativo = new System.Windows.Forms.Button();
+            this.BtnAbrirNativo = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -124,6 +134,9 @@
             this.flowLayoutPanel1.SuspendLayout();
             this.groupBox12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
+            this.groupBox13.SuspendLayout();
+            this.groupBox14.SuspendLayout();
+            this.groupBox15.SuspendLayout();
             this.SuspendLayout();
             // 
             // ListaImagenes
@@ -143,17 +156,18 @@
             // 
             this.label1.ImageIndex = 1;
             this.label1.ImageList = this.ListaImagenes;
-            this.label1.Location = new System.Drawing.Point(87, 41);
+            this.label1.Location = new System.Drawing.Point(58, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(37, 32);
             this.label1.TabIndex = 1;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(14, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(233, 100);
+            this.groupBox1.Size = new System.Drawing.Size(165, 67);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Image list en label";
@@ -170,9 +184,9 @@
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.LblMenustrip);
             this.groupBox2.Controls.Add(this.menuStrip1);
-            this.groupBox2.Location = new System.Drawing.Point(296, 12);
+            this.groupBox2.Location = new System.Drawing.Point(207, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(670, 109);
+            this.groupBox2.Size = new System.Drawing.Size(398, 109);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Menu Strip";
@@ -181,7 +195,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(349, 42);
+            this.label9.Location = new System.Drawing.Point(161, 45);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(45, 16);
             this.label9.TabIndex = 9;
@@ -191,7 +205,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(580, 70);
+            this.label8.Location = new System.Drawing.Point(311, 45);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(45, 16);
             this.label8.TabIndex = 8;
@@ -201,7 +215,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(507, 71);
+            this.label7.Location = new System.Drawing.Point(231, 74);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(51, 16);
             this.label7.TabIndex = 7;
@@ -211,7 +225,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("MartianMono NF", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(432, 73);
+            this.label6.Location = new System.Drawing.Point(220, 45);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(62, 16);
             this.label6.TabIndex = 6;
@@ -221,7 +235,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(352, 78);
+            this.label5.Location = new System.Drawing.Point(161, 73);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(44, 18);
             this.label5.TabIndex = 5;
@@ -231,7 +245,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(269, 71);
+            this.label4.Location = new System.Drawing.Point(96, 71);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(45, 16);
             this.label4.TabIndex = 4;
@@ -241,7 +255,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(187, 70);
+            this.label3.Location = new System.Drawing.Point(90, 45);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(51, 16);
             this.label3.TabIndex = 3;
@@ -251,7 +265,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(107, 70);
+            this.label2.Location = new System.Drawing.Point(18, 73);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(45, 16);
             this.label2.TabIndex = 2;
@@ -260,7 +274,7 @@
             // LblMenustrip
             // 
             this.LblMenustrip.AutoSize = true;
-            this.LblMenustrip.Location = new System.Drawing.Point(22, 70);
+            this.LblMenustrip.Location = new System.Drawing.Point(14, 45);
             this.LblMenustrip.Name = "LblMenustrip";
             this.LblMenustrip.Size = new System.Drawing.Size(49, 13);
             this.LblMenustrip.TabIndex = 1;
@@ -278,7 +292,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(3, 16);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(664, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(392, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -489,14 +503,14 @@
             this.groupBox6.Controls.Add(this.label11);
             this.groupBox6.Location = new System.Drawing.Point(14, 282);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(233, 100);
+            this.groupBox6.Size = new System.Drawing.Size(152, 100);
             this.groupBox6.TabIndex = 7;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Color Dialog";
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(77, 62);
+            this.button3.Location = new System.Drawing.Point(7, 62);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(117, 23);
             this.button3.TabIndex = 1;
@@ -507,11 +521,12 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(99, 29);
+            this.label11.Location = new System.Drawing.Point(16, 29);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(56, 13);
             this.label11.TabIndex = 0;
             this.label11.Text = "label11";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // groupBox7
             // 
@@ -772,51 +787,12 @@
             this.groupBox12.Controls.Add(this.BtnReproducir);
             this.groupBox12.Controls.Add(this.BtnAbrir);
             this.groupBox12.Controls.Add(this.axWindowsMediaPlayer1);
-            this.groupBox12.Location = new System.Drawing.Point(319, 401);
+            this.groupBox12.Location = new System.Drawing.Point(623, 12);
             this.groupBox12.Name = "groupBox12";
             this.groupBox12.Size = new System.Drawing.Size(343, 144);
             this.groupBox12.TabIndex = 15;
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "Reproductor de Audio";
-            // 
-            // axWindowsMediaPlayer1
-            // 
-            this.axWindowsMediaPlayer1.Enabled = true;
-            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(6, 19);
-            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
-            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
-            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(225, 106);
-            this.axWindowsMediaPlayer1.TabIndex = 0;
-            // 
-            // BtnAbrir
-            // 
-            this.BtnAbrir.Location = new System.Drawing.Point(245, 20);
-            this.BtnAbrir.Name = "BtnAbrir";
-            this.BtnAbrir.Size = new System.Drawing.Size(75, 23);
-            this.BtnAbrir.TabIndex = 1;
-            this.BtnAbrir.Text = "Abrir";
-            this.BtnAbrir.UseVisualStyleBackColor = true;
-            this.BtnAbrir.Click += new System.EventHandler(this.BtnAbrir_Click);
-            // 
-            // BtnReproducir
-            // 
-            this.BtnReproducir.Location = new System.Drawing.Point(245, 44);
-            this.BtnReproducir.Name = "BtnReproducir";
-            this.BtnReproducir.Size = new System.Drawing.Size(75, 23);
-            this.BtnReproducir.TabIndex = 2;
-            this.BtnReproducir.Text = "Reproducir";
-            this.BtnReproducir.UseVisualStyleBackColor = true;
-            this.BtnReproducir.Click += new System.EventHandler(this.BtnReproducir_Click);
-            // 
-            // BtnDetenerRep
-            // 
-            this.BtnDetenerRep.Location = new System.Drawing.Point(249, 73);
-            this.BtnDetenerRep.Name = "BtnDetenerRep";
-            this.BtnDetenerRep.Size = new System.Drawing.Size(75, 23);
-            this.BtnDetenerRep.TabIndex = 3;
-            this.BtnDetenerRep.Text = "Detener";
-            this.BtnDetenerRep.UseVisualStyleBackColor = true;
-            this.BtnDetenerRep.Click += new System.EventHandler(this.BtnDetenerRep_Click);
             // 
             // BtnPausa
             // 
@@ -828,11 +804,146 @@
             this.BtnPausa.UseVisualStyleBackColor = true;
             this.BtnPausa.Click += new System.EventHandler(this.BtnPausa_Click);
             // 
+            // BtnDetenerRep
+            // 
+            this.BtnDetenerRep.Location = new System.Drawing.Point(249, 73);
+            this.BtnDetenerRep.Name = "BtnDetenerRep";
+            this.BtnDetenerRep.Size = new System.Drawing.Size(75, 23);
+            this.BtnDetenerRep.TabIndex = 3;
+            this.BtnDetenerRep.Text = "Detener";
+            this.BtnDetenerRep.UseVisualStyleBackColor = true;
+            this.BtnDetenerRep.Click += new System.EventHandler(this.BtnDetenerRep_Click);
+            // 
+            // BtnReproducir
+            // 
+            this.BtnReproducir.Location = new System.Drawing.Point(245, 44);
+            this.BtnReproducir.Name = "BtnReproducir";
+            this.BtnReproducir.Size = new System.Drawing.Size(75, 23);
+            this.BtnReproducir.TabIndex = 2;
+            this.BtnReproducir.Text = "Reproducir";
+            this.BtnReproducir.UseVisualStyleBackColor = true;
+            this.BtnReproducir.Click += new System.EventHandler(this.BtnReproducir_Click);
+            // 
+            // BtnAbrir
+            // 
+            this.BtnAbrir.Location = new System.Drawing.Point(245, 20);
+            this.BtnAbrir.Name = "BtnAbrir";
+            this.BtnAbrir.Size = new System.Drawing.Size(75, 23);
+            this.BtnAbrir.TabIndex = 1;
+            this.BtnAbrir.Text = "Abrir";
+            this.BtnAbrir.UseVisualStyleBackColor = true;
+            this.BtnAbrir.Click += new System.EventHandler(this.BtnAbrir_Click);
+            // 
+            // axWindowsMediaPlayer1
+            // 
+            this.axWindowsMediaPlayer1.Enabled = true;
+            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(6, 19);
+            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
+            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
+            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(225, 106);
+            this.axWindowsMediaPlayer1.TabIndex = 0;
+            // 
+            // groupBox13
+            // 
+            this.groupBox13.Controls.Add(this.BtnBeep);
+            this.groupBox13.Location = new System.Drawing.Point(185, 282);
+            this.groupBox13.Name = "groupBox13";
+            this.groupBox13.Size = new System.Drawing.Size(105, 100);
+            this.groupBox13.TabIndex = 16;
+            this.groupBox13.TabStop = false;
+            this.groupBox13.Text = "Beep";
+            // 
+            // BtnBeep
+            // 
+            this.BtnBeep.Location = new System.Drawing.Point(10, 45);
+            this.BtnBeep.Name = "BtnBeep";
+            this.BtnBeep.Size = new System.Drawing.Size(75, 23);
+            this.BtnBeep.TabIndex = 0;
+            this.BtnBeep.Text = "Beep";
+            this.BtnBeep.UseVisualStyleBackColor = true;
+            this.BtnBeep.Click += new System.EventHandler(this.BtnBeep_Click);
+            // 
+            // groupBox14
+            // 
+            this.groupBox14.Controls.Add(this.button8);
+            this.groupBox14.Location = new System.Drawing.Point(14, 97);
+            this.groupBox14.Name = "groupBox14";
+            this.groupBox14.Size = new System.Drawing.Size(130, 57);
+            this.groupBox14.TabIndex = 17;
+            this.groupBox14.TabStop = false;
+            this.groupBox14.Text = "System Sound";
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(35, 19);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(75, 23);
+            this.button8.TabIndex = 0;
+            this.button8.Text = "Asterisk";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // groupBox15
+            // 
+            this.groupBox15.Controls.Add(this.BtnPausaNativo);
+            this.groupBox15.Controls.Add(this.BtnDetenerNativo);
+            this.groupBox15.Controls.Add(this.BtnPlayNativo);
+            this.groupBox15.Controls.Add(this.BtnAbrirNativo);
+            this.groupBox15.Location = new System.Drawing.Point(319, 401);
+            this.groupBox15.Name = "groupBox15";
+            this.groupBox15.Size = new System.Drawing.Size(200, 144);
+            this.groupBox15.TabIndex = 18;
+            this.groupBox15.TabStop = false;
+            this.groupBox15.Text = "Reproductor nativo";
+            // 
+            // BtnPausaNativo
+            // 
+            this.BtnPausaNativo.Location = new System.Drawing.Point(65, 102);
+            this.BtnPausaNativo.Name = "BtnPausaNativo";
+            this.BtnPausaNativo.Size = new System.Drawing.Size(75, 23);
+            this.BtnPausaNativo.TabIndex = 8;
+            this.BtnPausaNativo.Text = "Pausa";
+            this.BtnPausaNativo.UseVisualStyleBackColor = true;
+            this.BtnPausaNativo.Click += new System.EventHandler(this.BtnPausaNativo_Click);
+            // 
+            // BtnDetenerNativo
+            // 
+            this.BtnDetenerNativo.Location = new System.Drawing.Point(65, 73);
+            this.BtnDetenerNativo.Name = "BtnDetenerNativo";
+            this.BtnDetenerNativo.Size = new System.Drawing.Size(75, 23);
+            this.BtnDetenerNativo.TabIndex = 7;
+            this.BtnDetenerNativo.Text = "Detener";
+            this.BtnDetenerNativo.UseVisualStyleBackColor = true;
+            this.BtnDetenerNativo.Click += new System.EventHandler(this.BtnDetenerNativo_Click);
+            // 
+            // BtnPlayNativo
+            // 
+            this.BtnPlayNativo.Location = new System.Drawing.Point(61, 44);
+            this.BtnPlayNativo.Name = "BtnPlayNativo";
+            this.BtnPlayNativo.Size = new System.Drawing.Size(75, 23);
+            this.BtnPlayNativo.TabIndex = 6;
+            this.BtnPlayNativo.Text = "Reproducir";
+            this.BtnPlayNativo.UseVisualStyleBackColor = true;
+            this.BtnPlayNativo.Click += new System.EventHandler(this.BtnPlayNativo_Click);
+            // 
+            // BtnAbrirNativo
+            // 
+            this.BtnAbrirNativo.Location = new System.Drawing.Point(61, 20);
+            this.BtnAbrirNativo.Name = "BtnAbrirNativo";
+            this.BtnAbrirNativo.Size = new System.Drawing.Size(75, 23);
+            this.BtnAbrirNativo.TabIndex = 5;
+            this.BtnAbrirNativo.Text = "Abrir";
+            this.BtnAbrirNativo.UseVisualStyleBackColor = true;
+            this.BtnAbrirNativo.Click += new System.EventHandler(this.button12_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(980, 557);
+            this.Controls.Add(this.groupBox15);
+            this.Controls.Add(this.groupBox14);
+            this.Controls.Add(this.groupBox13);
             this.Controls.Add(this.groupBox12);
             this.Controls.Add(this.groupBox11);
             this.Controls.Add(this.groupBox10);
@@ -880,6 +991,9 @@
             this.flowLayoutPanel1.PerformLayout();
             this.groupBox12.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
+            this.groupBox13.ResumeLayout(false);
+            this.groupBox14.ResumeLayout(false);
+            this.groupBox15.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -964,6 +1078,16 @@
         private System.Windows.Forms.Button BtnReproducir;
         private System.Windows.Forms.Button BtnAbrir;
         private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.GroupBox groupBox13;
+        private System.Windows.Forms.Button BtnBeep;
+        private System.Windows.Forms.GroupBox groupBox14;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.GroupBox groupBox15;
+        private System.Windows.Forms.Button BtnPausaNativo;
+        private System.Windows.Forms.Button BtnDetenerNativo;
+        private System.Windows.Forms.Button BtnPlayNativo;
+        private System.Windows.Forms.Button BtnAbrirNativo;
     }
 }
 
