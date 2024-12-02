@@ -62,6 +62,7 @@
             this.reBuildToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cleanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
@@ -77,18 +78,30 @@
             this.label12 = new System.Windows.Forms.Label();
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.button5 = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.label14 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
+            this.label14 = new System.Windows.Forms.Label();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.printDialog1 = new System.Windows.Forms.PrintDialog();
-            this.label15 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.printDialog1 = new System.Windows.Forms.PrintDialog();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.Btnreestablecer = new System.Windows.Forms.Button();
+            this.TxtMiliSegundos = new System.Windows.Forms.Label();
+            this.BtnDetener = new System.Windows.Forms.Button();
+            this.BtnIniciar = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label16 = new System.Windows.Forms.Label();
+            this.TxtSegundos = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.TxtMinutos = new System.Windows.Forms.Label();
+            this.TxtHoras = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -101,6 +114,8 @@
             this.groupBox8.SuspendLayout();
             this.groupBox9.SuspendLayout();
             this.groupBox10.SuspendLayout();
+            this.groupBox11.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // ListaImagenes
@@ -392,6 +407,13 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Abrir formulario";
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(55, 29);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 1;
+            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(4, 67);
@@ -524,9 +546,14 @@
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Open File Dialog";
             // 
-            // openFileDialog1
+            // label13
             // 
-            this.openFileDialog1.FileName = "openFileDialog1";
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(6, 29);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(56, 13);
+            this.label13.TabIndex = 11;
+            this.label13.Text = "label13";
             // 
             // button5
             // 
@@ -538,14 +565,9 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // label13
+            // openFileDialog1
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(6, 29);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(56, 13);
-            this.label13.TabIndex = 11;
-            this.label13.Text = "label13";
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // groupBox9
             // 
@@ -558,15 +580,6 @@
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Save File Dialog";
             // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(3, 16);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(56, 13);
-            this.label14.TabIndex = 0;
-            this.label14.Text = "label14";
-            // 
             // button6
             // 
             this.button6.Location = new System.Drawing.Point(36, 55);
@@ -576,6 +589,15 @@
             this.button6.Text = "Guardar Archivo";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(3, 16);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(56, 13);
+            this.label14.TabIndex = 0;
+            this.label14.Text = "label14";
             // 
             // groupBox10
             // 
@@ -588,19 +610,6 @@
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Print Dialog";
             // 
-            // printDialog1
-            // 
-            this.printDialog1.UseEXDialog = true;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(73, 27);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(56, 13);
-            this.label15.TabIndex = 14;
-            this.label15.Text = "label15";
-            // 
             // button7
             // 
             this.button7.Location = new System.Drawing.Point(55, 55);
@@ -611,18 +620,150 @@
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
-            // textBox1
+            // label15
             // 
-            this.textBox1.Location = new System.Drawing.Point(55, 29);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(73, 27);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(56, 13);
+            this.label15.TabIndex = 14;
+            this.label15.Text = "label15";
+            // 
+            // printDialog1
+            // 
+            this.printDialog1.UseEXDialog = true;
+            // 
+            // groupBox11
+            // 
+            this.groupBox11.Controls.Add(this.flowLayoutPanel1);
+            this.groupBox11.Controls.Add(this.Btnreestablecer);
+            this.groupBox11.Controls.Add(this.BtnDetener);
+            this.groupBox11.Controls.Add(this.BtnIniciar);
+            this.groupBox11.Location = new System.Drawing.Point(14, 401);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Size = new System.Drawing.Size(282, 144);
+            this.groupBox11.TabIndex = 14;
+            this.groupBox11.TabStop = false;
+            this.groupBox11.Text = "Timer";
+            // 
+            // Btnreestablecer
+            // 
+            this.Btnreestablecer.Location = new System.Drawing.Point(171, 102);
+            this.Btnreestablecer.Name = "Btnreestablecer";
+            this.Btnreestablecer.Size = new System.Drawing.Size(105, 23);
+            this.Btnreestablecer.TabIndex = 3;
+            this.Btnreestablecer.Text = "Reestablecer";
+            this.Btnreestablecer.UseVisualStyleBackColor = true;
+            this.Btnreestablecer.Click += new System.EventHandler(this.Btnreestablecer_Click);
+            // 
+            // TxtMiliSegundos
+            // 
+            this.TxtMiliSegundos.AutoSize = true;
+            this.TxtMiliSegundos.Location = new System.Drawing.Point(123, 0);
+            this.TxtMiliSegundos.Name = "TxtMiliSegundos";
+            this.TxtMiliSegundos.Size = new System.Drawing.Size(14, 13);
+            this.TxtMiliSegundos.TabIndex = 2;
+            this.TxtMiliSegundos.Text = "0";
+            // 
+            // BtnDetener
+            // 
+            this.BtnDetener.Location = new System.Drawing.Point(90, 102);
+            this.BtnDetener.Name = "BtnDetener";
+            this.BtnDetener.Size = new System.Drawing.Size(75, 23);
+            this.BtnDetener.TabIndex = 1;
+            this.BtnDetener.Text = "Detener";
+            this.BtnDetener.UseVisualStyleBackColor = true;
+            this.BtnDetener.Click += new System.EventHandler(this.BtnDetener_Click);
+            // 
+            // BtnIniciar
+            // 
+            this.BtnIniciar.Location = new System.Drawing.Point(6, 102);
+            this.BtnIniciar.Name = "BtnIniciar";
+            this.BtnIniciar.Size = new System.Drawing.Size(75, 23);
+            this.BtnIniciar.TabIndex = 0;
+            this.BtnIniciar.Text = "Iniciar";
+            this.BtnIniciar.UseVisualStyleBackColor = true;
+            this.BtnIniciar.Click += new System.EventHandler(this.BtnIniciar_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.TxtHoras);
+            this.flowLayoutPanel1.Controls.Add(this.label18);
+            this.flowLayoutPanel1.Controls.Add(this.TxtMinutos);
+            this.flowLayoutPanel1.Controls.Add(this.label17);
+            this.flowLayoutPanel1.Controls.Add(this.TxtSegundos);
+            this.flowLayoutPanel1.Controls.Add(this.label16);
+            this.flowLayoutPanel1.Controls.Add(this.TxtMiliSegundos);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(55, 19);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 38);
+            this.flowLayoutPanel1.TabIndex = 4;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(103, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(14, 13);
+            this.label16.TabIndex = 3;
+            this.label16.Text = ".";
+            // 
+            // TxtSegundos
+            // 
+            this.TxtSegundos.AutoSize = true;
+            this.TxtSegundos.Location = new System.Drawing.Point(83, 0);
+            this.TxtSegundos.Name = "TxtSegundos";
+            this.TxtSegundos.Size = new System.Drawing.Size(14, 13);
+            this.TxtSegundos.TabIndex = 4;
+            this.TxtSegundos.Text = "0";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(63, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(14, 13);
+            this.label17.TabIndex = 5;
+            this.label17.Text = ":";
+            // 
+            // TxtMinutos
+            // 
+            this.TxtMinutos.AutoSize = true;
+            this.TxtMinutos.Location = new System.Drawing.Point(43, 0);
+            this.TxtMinutos.Name = "TxtMinutos";
+            this.TxtMinutos.Size = new System.Drawing.Size(14, 13);
+            this.TxtMinutos.TabIndex = 6;
+            this.TxtMinutos.Text = "0";
+            // 
+            // TxtHoras
+            // 
+            this.TxtHoras.AutoSize = true;
+            this.TxtHoras.Location = new System.Drawing.Point(3, 0);
+            this.TxtHoras.Name = "TxtHoras";
+            this.TxtHoras.Size = new System.Drawing.Size(14, 13);
+            this.TxtHoras.TabIndex = 7;
+            this.TxtHoras.Text = "0";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(23, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(14, 13);
+            this.label18.TabIndex = 8;
+            this.label18.Text = ":";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(980, 557);
+            this.Controls.Add(this.groupBox11);
             this.Controls.Add(this.groupBox10);
             this.Controls.Add(this.groupBox9);
             this.Controls.Add(this.groupBox8);
@@ -663,6 +804,9 @@
             this.groupBox9.PerformLayout();
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();
+            this.groupBox11.ResumeLayout(false);
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -728,6 +872,19 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.PrintDialog printDialog1;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.GroupBox groupBox11;
+        private System.Windows.Forms.Label TxtMiliSegundos;
+        private System.Windows.Forms.Button BtnDetener;
+        private System.Windows.Forms.Button BtnIniciar;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button Btnreestablecer;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Label TxtHoras;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label TxtMinutos;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label TxtSegundos;
+        private System.Windows.Forms.Label label16;
     }
 }
 

@@ -12,6 +12,10 @@ namespace Curso_clase_2
 {
     public partial class Form1 : Form
     {
+        private int miliSegundos = 0;
+        private int segundos = 0;
+        private int minutos = 0;
+        private int horas = 0;
         public Form1()
         {
             InitializeComponent();
@@ -88,6 +92,77 @@ namespace Curso_clase_2
             {
                 label15.Text = printDialog1.PrinterSettings.ToString();
             }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+            miliSegundos++;
+
+            if (miliSegundos < 10)
+            {
+
+                TxtMiliSegundos.Text = miliSegundos.ToString();
+
+            }
+            else
+            {
+                miliSegundos = 0;
+                segundos++;
+
+                TxtMiliSegundos.Text = miliSegundos.ToString();
+
+
+
+
+                if (segundos < 60)
+                {
+                    TxtSegundos.Text = segundos.ToString();
+
+                }
+                else
+                {
+                    segundos = 0;
+                    minutos++;
+                    TxtSegundos.Text = segundos.ToString();
+
+                    if (minutos < 60)
+                    {
+                        TxtMinutos.Text = minutos.ToString();
+                    }
+                    else
+                    {
+                        minutos = 0;
+                        horas++;
+                        TxtMinutos.Text = minutos.ToString();
+                        TxtHoras.Text = horas.ToString();
+
+                    }
+                }
+
+            }
+        }
+
+        private void BtnIniciar_Click(object sender, EventArgs e)
+        {
+            timer1.Enabled = true;
+        }
+
+        private void BtnDetener_Click(object sender, EventArgs e)
+        {
+            timer1.Enabled = false;
+        }
+
+        private void Btnreestablecer_Click(object sender, EventArgs e)
+        {
+            miliSegundos = 0;
+            segundos = 0;
+            minutos = 0;
+            horas = 0;
+            TxtMiliSegundos.Text = miliSegundos.ToString();
+            TxtSegundos.Text = segundos.ToString();
+            TxtMinutos.Text = minutos.ToString();
+            TxtHoras.Text = horas.ToString();
         }
     }
 }
