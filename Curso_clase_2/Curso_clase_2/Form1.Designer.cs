@@ -90,18 +90,24 @@
             this.label15 = new System.Windows.Forms.Label();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
-            this.Btnreestablecer = new System.Windows.Forms.Button();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.TxtHoras = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.TxtMinutos = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.TxtSegundos = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
             this.TxtMiliSegundos = new System.Windows.Forms.Label();
+            this.Btnreestablecer = new System.Windows.Forms.Button();
             this.BtnDetener = new System.Windows.Forms.Button();
             this.BtnIniciar = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label16 = new System.Windows.Forms.Label();
-            this.TxtSegundos = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.TxtMinutos = new System.Windows.Forms.Label();
-            this.TxtHoras = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
+            this.BtnAbrir = new System.Windows.Forms.Button();
+            this.BtnReproducir = new System.Windows.Forms.Button();
+            this.BtnDetenerRep = new System.Windows.Forms.Button();
+            this.BtnPausa = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -116,6 +122,8 @@
             this.groupBox10.SuspendLayout();
             this.groupBox11.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
+            this.groupBox12.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             this.SuspendLayout();
             // 
             // ListaImagenes
@@ -646,15 +654,73 @@
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "Timer";
             // 
-            // Btnreestablecer
+            // flowLayoutPanel1
             // 
-            this.Btnreestablecer.Location = new System.Drawing.Point(171, 102);
-            this.Btnreestablecer.Name = "Btnreestablecer";
-            this.Btnreestablecer.Size = new System.Drawing.Size(105, 23);
-            this.Btnreestablecer.TabIndex = 3;
-            this.Btnreestablecer.Text = "Reestablecer";
-            this.Btnreestablecer.UseVisualStyleBackColor = true;
-            this.Btnreestablecer.Click += new System.EventHandler(this.Btnreestablecer_Click);
+            this.flowLayoutPanel1.Controls.Add(this.TxtHoras);
+            this.flowLayoutPanel1.Controls.Add(this.label18);
+            this.flowLayoutPanel1.Controls.Add(this.TxtMinutos);
+            this.flowLayoutPanel1.Controls.Add(this.label17);
+            this.flowLayoutPanel1.Controls.Add(this.TxtSegundos);
+            this.flowLayoutPanel1.Controls.Add(this.label16);
+            this.flowLayoutPanel1.Controls.Add(this.TxtMiliSegundos);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(55, 19);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 38);
+            this.flowLayoutPanel1.TabIndex = 4;
+            // 
+            // TxtHoras
+            // 
+            this.TxtHoras.AutoSize = true;
+            this.TxtHoras.Location = new System.Drawing.Point(3, 0);
+            this.TxtHoras.Name = "TxtHoras";
+            this.TxtHoras.Size = new System.Drawing.Size(14, 13);
+            this.TxtHoras.TabIndex = 7;
+            this.TxtHoras.Text = "0";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(23, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(14, 13);
+            this.label18.TabIndex = 8;
+            this.label18.Text = ":";
+            // 
+            // TxtMinutos
+            // 
+            this.TxtMinutos.AutoSize = true;
+            this.TxtMinutos.Location = new System.Drawing.Point(43, 0);
+            this.TxtMinutos.Name = "TxtMinutos";
+            this.TxtMinutos.Size = new System.Drawing.Size(14, 13);
+            this.TxtMinutos.TabIndex = 6;
+            this.TxtMinutos.Text = "0";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(63, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(14, 13);
+            this.label17.TabIndex = 5;
+            this.label17.Text = ":";
+            // 
+            // TxtSegundos
+            // 
+            this.TxtSegundos.AutoSize = true;
+            this.TxtSegundos.Location = new System.Drawing.Point(83, 0);
+            this.TxtSegundos.Name = "TxtSegundos";
+            this.TxtSegundos.Size = new System.Drawing.Size(14, 13);
+            this.TxtSegundos.TabIndex = 4;
+            this.TxtSegundos.Text = "0";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(103, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(14, 13);
+            this.label16.TabIndex = 3;
+            this.label16.Text = ".";
             // 
             // TxtMiliSegundos
             // 
@@ -664,6 +730,16 @@
             this.TxtMiliSegundos.Size = new System.Drawing.Size(14, 13);
             this.TxtMiliSegundos.TabIndex = 2;
             this.TxtMiliSegundos.Text = "0";
+            // 
+            // Btnreestablecer
+            // 
+            this.Btnreestablecer.Location = new System.Drawing.Point(171, 102);
+            this.Btnreestablecer.Name = "Btnreestablecer";
+            this.Btnreestablecer.Size = new System.Drawing.Size(105, 23);
+            this.Btnreestablecer.TabIndex = 3;
+            this.Btnreestablecer.Text = "Reestablecer";
+            this.Btnreestablecer.UseVisualStyleBackColor = true;
+            this.Btnreestablecer.Click += new System.EventHandler(this.Btnreestablecer_Click);
             // 
             // BtnDetener
             // 
@@ -687,82 +763,77 @@
             // 
             // timer1
             // 
-            this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // flowLayoutPanel1
+            // groupBox12
             // 
-            this.flowLayoutPanel1.Controls.Add(this.TxtHoras);
-            this.flowLayoutPanel1.Controls.Add(this.label18);
-            this.flowLayoutPanel1.Controls.Add(this.TxtMinutos);
-            this.flowLayoutPanel1.Controls.Add(this.label17);
-            this.flowLayoutPanel1.Controls.Add(this.TxtSegundos);
-            this.flowLayoutPanel1.Controls.Add(this.label16);
-            this.flowLayoutPanel1.Controls.Add(this.TxtMiliSegundos);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(55, 19);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 38);
-            this.flowLayoutPanel1.TabIndex = 4;
+            this.groupBox12.Controls.Add(this.BtnPausa);
+            this.groupBox12.Controls.Add(this.BtnDetenerRep);
+            this.groupBox12.Controls.Add(this.BtnReproducir);
+            this.groupBox12.Controls.Add(this.BtnAbrir);
+            this.groupBox12.Controls.Add(this.axWindowsMediaPlayer1);
+            this.groupBox12.Location = new System.Drawing.Point(319, 401);
+            this.groupBox12.Name = "groupBox12";
+            this.groupBox12.Size = new System.Drawing.Size(343, 144);
+            this.groupBox12.TabIndex = 15;
+            this.groupBox12.TabStop = false;
+            this.groupBox12.Text = "Reproductor de Audio";
             // 
-            // label16
+            // axWindowsMediaPlayer1
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(103, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(14, 13);
-            this.label16.TabIndex = 3;
-            this.label16.Text = ".";
+            this.axWindowsMediaPlayer1.Enabled = true;
+            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(6, 19);
+            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
+            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
+            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(225, 106);
+            this.axWindowsMediaPlayer1.TabIndex = 0;
             // 
-            // TxtSegundos
+            // BtnAbrir
             // 
-            this.TxtSegundos.AutoSize = true;
-            this.TxtSegundos.Location = new System.Drawing.Point(83, 0);
-            this.TxtSegundos.Name = "TxtSegundos";
-            this.TxtSegundos.Size = new System.Drawing.Size(14, 13);
-            this.TxtSegundos.TabIndex = 4;
-            this.TxtSegundos.Text = "0";
+            this.BtnAbrir.Location = new System.Drawing.Point(245, 20);
+            this.BtnAbrir.Name = "BtnAbrir";
+            this.BtnAbrir.Size = new System.Drawing.Size(75, 23);
+            this.BtnAbrir.TabIndex = 1;
+            this.BtnAbrir.Text = "Abrir";
+            this.BtnAbrir.UseVisualStyleBackColor = true;
+            this.BtnAbrir.Click += new System.EventHandler(this.BtnAbrir_Click);
             // 
-            // label17
+            // BtnReproducir
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(63, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(14, 13);
-            this.label17.TabIndex = 5;
-            this.label17.Text = ":";
+            this.BtnReproducir.Location = new System.Drawing.Point(245, 44);
+            this.BtnReproducir.Name = "BtnReproducir";
+            this.BtnReproducir.Size = new System.Drawing.Size(75, 23);
+            this.BtnReproducir.TabIndex = 2;
+            this.BtnReproducir.Text = "Reproducir";
+            this.BtnReproducir.UseVisualStyleBackColor = true;
+            this.BtnReproducir.Click += new System.EventHandler(this.BtnReproducir_Click);
             // 
-            // TxtMinutos
+            // BtnDetenerRep
             // 
-            this.TxtMinutos.AutoSize = true;
-            this.TxtMinutos.Location = new System.Drawing.Point(43, 0);
-            this.TxtMinutos.Name = "TxtMinutos";
-            this.TxtMinutos.Size = new System.Drawing.Size(14, 13);
-            this.TxtMinutos.TabIndex = 6;
-            this.TxtMinutos.Text = "0";
+            this.BtnDetenerRep.Location = new System.Drawing.Point(249, 73);
+            this.BtnDetenerRep.Name = "BtnDetenerRep";
+            this.BtnDetenerRep.Size = new System.Drawing.Size(75, 23);
+            this.BtnDetenerRep.TabIndex = 3;
+            this.BtnDetenerRep.Text = "Detener";
+            this.BtnDetenerRep.UseVisualStyleBackColor = true;
+            this.BtnDetenerRep.Click += new System.EventHandler(this.BtnDetenerRep_Click);
             // 
-            // TxtHoras
+            // BtnPausa
             // 
-            this.TxtHoras.AutoSize = true;
-            this.TxtHoras.Location = new System.Drawing.Point(3, 0);
-            this.TxtHoras.Name = "TxtHoras";
-            this.TxtHoras.Size = new System.Drawing.Size(14, 13);
-            this.TxtHoras.TabIndex = 7;
-            this.TxtHoras.Text = "0";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(23, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(14, 13);
-            this.label18.TabIndex = 8;
-            this.label18.Text = ":";
+            this.BtnPausa.Location = new System.Drawing.Point(249, 102);
+            this.BtnPausa.Name = "BtnPausa";
+            this.BtnPausa.Size = new System.Drawing.Size(75, 23);
+            this.BtnPausa.TabIndex = 4;
+            this.BtnPausa.Text = "Pausa";
+            this.BtnPausa.UseVisualStyleBackColor = true;
+            this.BtnPausa.Click += new System.EventHandler(this.BtnPausa_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(980, 557);
+            this.Controls.Add(this.groupBox12);
             this.Controls.Add(this.groupBox11);
             this.Controls.Add(this.groupBox10);
             this.Controls.Add(this.groupBox9);
@@ -807,6 +878,8 @@
             this.groupBox11.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
+            this.groupBox12.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -885,6 +958,12 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label TxtSegundos;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.GroupBox groupBox12;
+        private System.Windows.Forms.Button BtnPausa;
+        private System.Windows.Forms.Button BtnDetenerRep;
+        private System.Windows.Forms.Button BtnReproducir;
+        private System.Windows.Forms.Button BtnAbrir;
+        private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
     }
 }
 

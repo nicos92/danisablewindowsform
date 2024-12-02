@@ -16,6 +16,7 @@ namespace Curso_clase_2
         private int segundos = 0;
         private int minutos = 0;
         private int horas = 0;
+        private string ruta = "";
         public Form1()
         {
             InitializeComponent();
@@ -163,6 +164,31 @@ namespace Curso_clase_2
             TxtSegundos.Text = segundos.ToString();
             TxtMinutos.Text = minutos.ToString();
             TxtHoras.Text = horas.ToString();
+        }
+
+        private void BtnAbrir_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                ruta = openFileDialog1.FileName;
+            }
+        }
+
+        private void BtnReproducir_Click(object sender, EventArgs e)
+        {
+            axWindowsMediaPlayer1.URL = ruta;
+            axWindowsMediaPlayer1.Ctlcontrols.play();
+        }
+
+        private void BtnDetenerRep_Click(object sender, EventArgs e)
+        {
+            axWindowsMediaPlayer1.Ctlcontrols.stop();
+        }
+
+        private void BtnPausa_Click(object sender, EventArgs e)
+        {
+            axWindowsMediaPlayer1.Ctlcontrols.pause();
+
         }
     }
 }
