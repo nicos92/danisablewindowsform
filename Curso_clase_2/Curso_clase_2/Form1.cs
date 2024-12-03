@@ -176,6 +176,7 @@ namespace Curso_clase_2
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 ruta = openFileDialog1.FileName;
+                errorProvider1.Clear();
             }
         }
 
@@ -187,6 +188,7 @@ namespace Curso_clase_2
             }
             else
             {
+                errorProvider1.Clear();
 
                 axWindowsMediaPlayer1.URL = ruta;
                 axWindowsMediaPlayer1.Ctlcontrols.play();
