@@ -181,9 +181,17 @@ namespace Curso_clase_2
 
         private void BtnReproducir_Click(object sender, EventArgs e)
         {
-            axWindowsMediaPlayer1.URL = ruta;
-            axWindowsMediaPlayer1.Ctlcontrols.play();
-            LblEstado.Text = "Reproduciendo";
+            if (ruta == string.Empty)
+            {
+                errorProvider1.SetError(BtnReproducir, "No abrio ningun archivo");
+            }
+            else
+            {
+
+                axWindowsMediaPlayer1.URL = ruta;
+                axWindowsMediaPlayer1.Ctlcontrols.play();
+                LblEstado.Text = "Reproduciendo";
+            }
         }
 
         private void BtnDetenerRep_Click(object sender, EventArgs e)
@@ -210,10 +218,10 @@ namespace Curso_clase_2
         {
             int frequency = 1000;
             int duration = 200;
-            Console.Beep(frequency,duration);
+            Console.Beep(frequency, duration);
         }
 
-       
+
         // no funcionan, por alguna razon,supongo que es Windows 11, en el windows 10 del trabajo funcionan casi todos menos el question.
         private void button8_Click(object sender, EventArgs e)
         {
@@ -260,7 +268,7 @@ namespace Curso_clase_2
 
         private void Form1_SizeChanged(object sender, EventArgs e)
         {
-            toolStripStatusLabel1.Text = "¤"+this.Width.ToString() + "x" + this.Height.ToString();
+            toolStripStatusLabel1.Text = "¤" + this.Width.ToString() + "x" + this.Height.ToString();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -279,7 +287,7 @@ namespace Curso_clase_2
             dataGridView1.Rows[num].Cells[3].Value = Convert.ToInt32(TxtCalificacion.Text) >= 7 ? true : false;
         }
 
-        private  void WriteEventLogEntry(string message)
+        private void WriteEventLogEntry(string message)
         {
             //Log de eventos en Windows: Los eventos se guardan en el Visor de eventos de Windows, que puedes acceder desde "Panel de control > Herramientas administrativas > Visor de eventos". Ahí podrás ver los eventos registrados por tu aplicación.
             //El uso de la herramienta Event Log en una aplicación de Windows Forms es útil para registrar información importante, advertencias o errores.Es importante manejar adecuadamente los permisos y asegurarte de que la fuente de eventos esté configurada correctamente para evitar errores al escribir en el registro de eventos.

@@ -148,10 +148,11 @@
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.eventLog2 = new System.Diagnostics.EventLog();
             this.groupBox19 = new System.Windows.Forms.GroupBox();
-            this.domainUpDown1 = new System.Windows.Forms.DomainUpDown();
             this.label2 = new System.Windows.Forms.Label();
+            this.domainUpDown1 = new System.Windows.Forms.DomainUpDown();
             this.ToolTipInfoCronometro = new System.Windows.Forms.ToolTip(this.components);
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -184,6 +185,7 @@
             this.toolStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.eventLog2)).BeginInit();
             this.groupBox19.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // ListaImagenes
@@ -956,8 +958,10 @@
             // 
             // BtnAgregar
             // 
+            this.helpProvider1.SetHelpString(this.BtnAgregar, "Agregar datos a la tabla");
             this.BtnAgregar.Location = new System.Drawing.Point(504, 102);
             this.BtnAgregar.Name = "BtnAgregar";
+            this.helpProvider1.SetShowHelp(this.BtnAgregar, true);
             this.BtnAgregar.Size = new System.Drawing.Size(75, 23);
             this.BtnAgregar.TabIndex = 1;
             this.BtnAgregar.Text = "Agregar";
@@ -1211,6 +1215,15 @@
             this.groupBox19.TabStop = false;
             this.groupBox19.Text = "Domain Up Down";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(63, 83);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(49, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "label2";
+            // 
             // domainUpDown1
             // 
             this.domainUpDown1.Items.Add("Argentina");
@@ -1223,19 +1236,14 @@
             this.domainUpDown1.Text = "domainUpDown1";
             this.domainUpDown1.SelectedItemChanged += new System.EventHandler(this.domainUpDown1_SelectedItemChanged);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(63, 83);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "label2";
-            // 
             // ToolTipInfoCronometro
             // 
             this.ToolTipInfoCronometro.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.ToolTipInfoCronometro.ToolTipTitle = "Cronometro";
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // Form1
             // 
@@ -1327,6 +1335,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.eventLog2)).EndInit();
             this.groupBox19.ResumeLayout(false);
             this.groupBox19.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1456,6 +1465,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ToolTip ToolTipInfoCronometro;
         private System.Windows.Forms.HelpProvider helpProvider1;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
 
