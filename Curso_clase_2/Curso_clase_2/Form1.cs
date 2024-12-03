@@ -34,7 +34,7 @@ namespace Curso_clase_2
 
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            LblMenustrip.Text = "New";
+            //LblMenustrip.Text = "New";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -208,20 +208,20 @@ namespace Curso_clase_2
 
         private void BtnBeep_Click(object sender, EventArgs e)
         {
-            int frequency = 1500;
+            int frequency = 1000;
             int duration = 200;
             Console.Beep(frequency,duration);
         }
 
        
-        // no funcionan, por alguna razon,supongo que es Windows 11
+        // no funcionan, por alguna razon,supongo que es Windows 11, en el windows 10 del trabajo funcionan casi todos menos el question.
         private void button8_Click(object sender, EventArgs e)
         {
-            System.Media.SystemSounds.Asterisk.Play();
-            System.Media.SystemSounds.Beep.Play();
-            System.Media.SystemSounds.Hand.Play();
-            System.Media.SystemSounds.Exclamation.Play();
-            System.Media.SystemSounds.Question.Play();
+            SystemSounds.Asterisk.Play();
+            //SystemSounds.Beep.Play();
+            //SystemSounds.Hand.Play();
+            //SystemSounds.Exclamation.Play();
+            //SystemSounds.Question.Play();
 
 
 
@@ -281,13 +281,15 @@ namespace Curso_clase_2
 
         private  void WriteEventLogEntry(string message)
         {
+            //Log de eventos en Windows: Los eventos se guardan en el Visor de eventos de Windows, que puedes acceder desde "Panel de control > Herramientas administrativas > Visor de eventos". Ahí podrás ver los eventos registrados por tu aplicación.
+            //El uso de la herramienta Event Log en una aplicación de Windows Forms es útil para registrar información importante, advertencias o errores.Es importante manejar adecuadamente los permisos y asegurarte de que la fuente de eventos esté configurada correctamente para evitar errores al escribir en el registro de eventos.
             // Create an instance of EventLog
-            
+
 
             // Check if the event source exists. If not create it.
-            if (!System.Diagnostics.EventLog.SourceExists("TestApplication"))
+            if (!EventLog.SourceExists("TestApplication"))
             {
-                System.Diagnostics.EventLog.CreateEventSource("TestApplication", "Application");
+                EventLog.CreateEventSource("TestApplication", "Application");
             }
 
             // Set the source name for writing log entries.
@@ -298,14 +300,16 @@ namespace Curso_clase_2
 
             // Write an entry to the event log.
             eventLog1.WriteEntry(message,
-                                System.Diagnostics.EventLogEntryType.Error,
+                                EventLogEntryType.Information,
                                 eventID);
 
             // Close the Event Log
             eventLog1.Close();
         }
 
-
-
+        private void domainUpDown1_SelectedItemChanged(object sender, EventArgs e)
+        {
+            label2.Text = domainUpDown1.Text;
+        }
     }
 }

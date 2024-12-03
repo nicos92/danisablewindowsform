@@ -34,15 +34,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.LblMenustrip = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -155,6 +146,12 @@
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.eventLog2 = new System.Diagnostics.EventLog();
+            this.groupBox19 = new System.Windows.Forms.GroupBox();
+            this.domainUpDown1 = new System.Windows.Forms.DomainUpDown();
+            this.label2 = new System.Windows.Forms.Label();
+            this.ToolTipInfoCronometro = new System.Windows.Forms.ToolTip(this.components);
+            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -185,6 +182,8 @@
             this.toolStripContainer1.SuspendLayout();
             this.toolStrip3.SuspendLayout();
             this.toolStrip2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.eventLog2)).BeginInit();
+            this.groupBox19.SuspendLayout();
             this.SuspendLayout();
             // 
             // ListaImagenes
@@ -222,111 +221,13 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.LblMenustrip);
             this.groupBox2.Controls.Add(this.menuStrip1);
             this.groupBox2.Location = new System.Drawing.Point(207, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(398, 109);
+            this.groupBox2.Size = new System.Drawing.Size(398, 61);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Menu Strip";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(161, 45);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(45, 16);
-            this.label9.TabIndex = 9;
-            this.label9.Text = "label9";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(311, 45);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(45, 16);
-            this.label8.TabIndex = 8;
-            this.label8.Text = "label8";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(231, 74);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(51, 16);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "label7";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("MartianMono NF", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(220, 45);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(62, 16);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "label6";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(161, 73);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(44, 18);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "label5";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(96, 71);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(45, 16);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "label4";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(90, 45);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 16);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "label3";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(18, 73);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 16);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "label2";
-            // 
-            // LblMenustrip
-            // 
-            this.LblMenustrip.AutoSize = true;
-            this.LblMenustrip.Location = new System.Drawing.Point(14, 45);
-            this.LblMenustrip.Name = "LblMenustrip";
-            this.LblMenustrip.Size = new System.Drawing.Size(49, 13);
-            this.LblMenustrip.TabIndex = 1;
-            this.LblMenustrip.Text = "label2";
             // 
             // menuStrip1
             // 
@@ -497,9 +398,9 @@
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.button2);
-            this.groupBox4.Location = new System.Drawing.Point(286, 160);
+            this.groupBox4.Location = new System.Drawing.Point(175, 86);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(233, 100);
+            this.groupBox4.Size = new System.Drawing.Size(233, 61);
             this.groupBox4.TabIndex = 5;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Abrir Message Box";
@@ -519,9 +420,9 @@
             // 
             this.groupBox5.Controls.Add(this.label10);
             this.groupBox5.Controls.Add(this.trackBar1);
-            this.groupBox5.Location = new System.Drawing.Point(538, 160);
+            this.groupBox5.Location = new System.Drawing.Point(268, 160);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(213, 100);
+            this.groupBox5.Size = new System.Drawing.Size(153, 100);
             this.groupBox5.TabIndex = 6;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Track Bar";
@@ -540,7 +441,7 @@
             this.trackBar1.LargeChange = 1;
             this.trackBar1.Location = new System.Drawing.Point(30, 29);
             this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(176, 45);
+            this.trackBar1.Size = new System.Drawing.Size(110, 45);
             this.trackBar1.TabIndex = 0;
             this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
             // 
@@ -549,7 +450,7 @@
             this.groupBox6.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.groupBox6.Controls.Add(this.button3);
             this.groupBox6.Controls.Add(this.label11);
-            this.groupBox6.Location = new System.Drawing.Point(14, 282);
+            this.groupBox6.Location = new System.Drawing.Point(431, 160);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(152, 100);
             this.groupBox6.TabIndex = 7;
@@ -580,16 +481,16 @@
             // 
             this.groupBox7.Controls.Add(this.button4);
             this.groupBox7.Controls.Add(this.label12);
-            this.groupBox7.Location = new System.Drawing.Point(300, 282);
+            this.groupBox7.Location = new System.Drawing.Point(589, 176);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(195, 100);
+            this.groupBox7.Size = new System.Drawing.Size(138, 100);
             this.groupBox7.TabIndex = 8;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Font Dialog";
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(50, 45);
+            this.button4.Location = new System.Drawing.Point(6, 49);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(118, 23);
             this.button4.TabIndex = 10;
@@ -600,7 +501,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(72, 29);
+            this.label12.Location = new System.Drawing.Point(28, 33);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(56, 13);
             this.label12.TabIndex = 9;
@@ -710,7 +611,7 @@
             this.groupBox11.Controls.Add(this.Btnreestablecer);
             this.groupBox11.Controls.Add(this.BtnDetener);
             this.groupBox11.Controls.Add(this.BtnIniciar);
-            this.groupBox11.Location = new System.Drawing.Point(14, 401);
+            this.groupBox11.Location = new System.Drawing.Point(18, 282);
             this.groupBox11.Name = "groupBox11";
             this.groupBox11.Size = new System.Drawing.Size(282, 144);
             this.groupBox11.TabIndex = 14;
@@ -801,6 +702,7 @@
             this.Btnreestablecer.Size = new System.Drawing.Size(105, 23);
             this.Btnreestablecer.TabIndex = 3;
             this.Btnreestablecer.Text = "Reestablecer";
+            this.ToolTipInfoCronometro.SetToolTip(this.Btnreestablecer, "Reestable todos los valores del Cronometro a cero");
             this.Btnreestablecer.UseVisualStyleBackColor = true;
             this.Btnreestablecer.Click += new System.EventHandler(this.Btnreestablecer_Click);
             // 
@@ -811,6 +713,7 @@
             this.BtnDetener.Size = new System.Drawing.Size(75, 23);
             this.BtnDetener.TabIndex = 1;
             this.BtnDetener.Text = "Detener";
+            this.ToolTipInfoCronometro.SetToolTip(this.BtnDetener, "Detiene el Cronometro");
             this.BtnDetener.UseVisualStyleBackColor = true;
             this.BtnDetener.Click += new System.EventHandler(this.BtnDetener_Click);
             // 
@@ -821,6 +724,7 @@
             this.BtnIniciar.Size = new System.Drawing.Size(75, 23);
             this.BtnIniciar.TabIndex = 0;
             this.BtnIniciar.Text = "Iniciar";
+            this.ToolTipInfoCronometro.SetToolTip(this.BtnIniciar, "Inicia el Cronometro");
             this.BtnIniciar.UseVisualStyleBackColor = true;
             this.BtnIniciar.Click += new System.EventHandler(this.BtnIniciar_Click);
             // 
@@ -894,16 +798,16 @@
             // groupBox13
             // 
             this.groupBox13.Controls.Add(this.BtnBeep);
-            this.groupBox13.Location = new System.Drawing.Point(185, 282);
+            this.groupBox13.Location = new System.Drawing.Point(446, 86);
             this.groupBox13.Name = "groupBox13";
-            this.groupBox13.Size = new System.Drawing.Size(105, 100);
+            this.groupBox13.Size = new System.Drawing.Size(105, 61);
             this.groupBox13.TabIndex = 16;
             this.groupBox13.TabStop = false;
             this.groupBox13.Text = "Beep";
             // 
             // BtnBeep
             // 
-            this.BtnBeep.Location = new System.Drawing.Point(10, 45);
+            this.BtnBeep.Location = new System.Drawing.Point(6, 19);
             this.BtnBeep.Name = "BtnBeep";
             this.BtnBeep.Size = new System.Drawing.Size(75, 23);
             this.BtnBeep.TabIndex = 0;
@@ -937,7 +841,7 @@
             this.groupBox15.Controls.Add(this.BtnDetenerNativo);
             this.groupBox15.Controls.Add(this.BtnPlayNativo);
             this.groupBox15.Controls.Add(this.BtnAbrirNativo);
-            this.groupBox15.Location = new System.Drawing.Point(319, 401);
+            this.groupBox15.Location = new System.Drawing.Point(316, 282);
             this.groupBox15.Name = "groupBox15";
             this.groupBox15.Size = new System.Drawing.Size(200, 144);
             this.groupBox15.TabIndex = 18;
@@ -1097,9 +1001,9 @@
             // groupBox17
             // 
             this.groupBox17.Controls.Add(this.toolStrip1);
-            this.groupBox17.Location = new System.Drawing.Point(14, 551);
+            this.groupBox17.Location = new System.Drawing.Point(24, 445);
             this.groupBox17.Name = "groupBox17";
-            this.groupBox17.Size = new System.Drawing.Size(453, 77);
+            this.groupBox17.Size = new System.Drawing.Size(505, 77);
             this.groupBox17.TabIndex = 21;
             this.groupBox17.TabStop = false;
             this.groupBox17.Text = "Tool Strip";
@@ -1116,7 +1020,7 @@
             this.toolStripTextBox1});
             this.toolStrip1.Location = new System.Drawing.Point(3, 16);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(447, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(499, 25);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -1171,9 +1075,9 @@
             // groupBox18
             // 
             this.groupBox18.Controls.Add(this.toolStripContainer1);
-            this.groupBox18.Location = new System.Drawing.Point(541, 445);
+            this.groupBox18.Location = new System.Drawing.Point(554, 445);
             this.groupBox18.Name = "groupBox18";
-            this.groupBox18.Size = new System.Drawing.Size(303, 168);
+            this.groupBox18.Size = new System.Drawing.Size(271, 241);
             this.groupBox18.TabIndex = 1;
             this.groupBox18.TabStop = false;
             this.groupBox18.Text = "Tool Strip container";
@@ -1187,11 +1091,11 @@
             // 
             // toolStripContainer1.ContentPanel
             // 
-            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(297, 99);
+            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(265, 172);
             this.toolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.toolStripContainer1.Location = new System.Drawing.Point(3, 16);
             this.toolStripContainer1.Name = "toolStripContainer1";
-            this.toolStripContainer1.Size = new System.Drawing.Size(297, 149);
+            this.toolStripContainer1.Size = new System.Drawing.Size(265, 222);
             this.toolStripContainer1.TabIndex = 0;
             this.toolStripContainer1.Text = "toolStripContainer1";
             // 
@@ -1210,7 +1114,7 @@
             this.toolStripLabel4});
             this.toolStrip3.Location = new System.Drawing.Point(3, 0);
             this.toolStrip3.Name = "toolStrip3";
-            this.toolStrip3.Size = new System.Drawing.Size(282, 25);
+            this.toolStrip3.Size = new System.Drawing.Size(262, 25);
             this.toolStrip3.TabIndex = 0;
             // 
             // toolStripLabel2
@@ -1292,11 +1196,53 @@
             this.toolStripButton4.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton4.Text = "toolStripButton4";
             // 
+            // eventLog2
+            // 
+            this.eventLog2.SynchronizingObject = this;
+            // 
+            // groupBox19
+            // 
+            this.groupBox19.Controls.Add(this.label2);
+            this.groupBox19.Controls.Add(this.domainUpDown1);
+            this.groupBox19.Location = new System.Drawing.Point(18, 537);
+            this.groupBox19.Name = "groupBox19";
+            this.groupBox19.Size = new System.Drawing.Size(210, 146);
+            this.groupBox19.TabIndex = 1;
+            this.groupBox19.TabStop = false;
+            this.groupBox19.Text = "Domain Up Down";
+            // 
+            // domainUpDown1
+            // 
+            this.domainUpDown1.Items.Add("Argentina");
+            this.domainUpDown1.Items.Add("Uruguay");
+            this.domainUpDown1.Items.Add("Chile");
+            this.domainUpDown1.Location = new System.Drawing.Point(31, 31);
+            this.domainUpDown1.Name = "domainUpDown1";
+            this.domainUpDown1.Size = new System.Drawing.Size(120, 20);
+            this.domainUpDown1.TabIndex = 0;
+            this.domainUpDown1.Text = "domainUpDown1";
+            this.domainUpDown1.SelectedItemChanged += new System.EventHandler(this.domainUpDown1_SelectedItemChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(63, 83);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(49, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "label2";
+            // 
+            // ToolTipInfoCronometro
+            // 
+            this.ToolTipInfoCronometro.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.ToolTipInfoCronometro.ToolTipTitle = "Cronometro";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 711);
+            this.Controls.Add(this.groupBox19);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.groupBox18);
             this.Controls.Add(this.groupBox17);
@@ -1317,6 +1263,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Hack Nerd Font", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HelpButton = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
@@ -1324,6 +1271,7 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Curso Clase 2";
+            this.TransparencyKey = System.Drawing.Color.Red;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.SizeChanged += new System.EventHandler(this.Form1_SizeChanged);
             this.groupBox1.ResumeLayout(false);
@@ -1376,6 +1324,9 @@
             this.toolStrip3.PerformLayout();
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.eventLog2)).EndInit();
+            this.groupBox19.ResumeLayout(false);
+            this.groupBox19.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1405,15 +1356,6 @@
         private System.Windows.Forms.ToolStripMenuItem buildToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem reBuildToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cleanToolStripMenuItem;
-        private System.Windows.Forms.Label LblMenustrip;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox4;
@@ -1508,6 +1450,12 @@
         private System.Windows.Forms.ToolStripLabel toolStripLabel3;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripLabel toolStripLabel4;
+        private System.Diagnostics.EventLog eventLog2;
+        private System.Windows.Forms.GroupBox groupBox19;
+        private System.Windows.Forms.DomainUpDown domainUpDown1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ToolTip ToolTipInfoCronometro;
+        private System.Windows.Forms.HelpProvider helpProvider1;
     }
 }
 
