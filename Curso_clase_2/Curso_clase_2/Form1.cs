@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Media;
@@ -19,6 +20,7 @@ namespace Curso_clase_2
         private int horas = 0;
         private string ruta = "";
         private SoundPlayer player = new SoundPlayer();
+        private EventLog eventLog1 = new EventLog();
 
         public Form1()
         {
@@ -181,16 +183,21 @@ namespace Curso_clase_2
         {
             axWindowsMediaPlayer1.URL = ruta;
             axWindowsMediaPlayer1.Ctlcontrols.play();
+            LblEstado.Text = "Reproduciendo";
         }
 
         private void BtnDetenerRep_Click(object sender, EventArgs e)
         {
             axWindowsMediaPlayer1.Ctlcontrols.stop();
+            LblEstado.Text = "Detenido";
+
         }
 
         private void BtnPausa_Click(object sender, EventArgs e)
         {
             axWindowsMediaPlayer1.Ctlcontrols.pause();
+            LblEstado.Text = "En Pausa";
+
 
         }
 
@@ -250,5 +257,55 @@ namespace Curso_clase_2
         {
             // no tiene pausa
         }
+
+        private void Form1_SizeChanged(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "¤"+this.Width.ToString() + "x" + this.Height.ToString();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "¤" + this.Width.ToString() + "x" + this.Height.ToString();
+            WriteEventLogEntry("This is an entry in the event log by daveoncsharp.com");
+
+        }
+
+        private void BtnAgregar_Click(object sender, EventArgs e)
+        {
+            int num = dataGridView1.Rows.Add();
+            dataGridView1.Rows[num].Cells[0].Value = TxtNombre.Text;
+            dataGridView1.Rows[num].Cells[1].Value = TxtApellido.Text;
+            dataGridView1.Rows[num].Cells[2].Value = TxtCalificacion.Text;
+            dataGridView1.Rows[num].Cells[3].Value = Convert.ToInt32(TxtCalificacion.Text) >= 7 ? true : false;
+        }
+
+        private  void WriteEventLogEntry(string message)
+        {
+            // Create an instance of EventLog
+            
+
+            // Check if the event source exists. If not create it.
+            if (!System.Diagnostics.EventLog.SourceExists("TestApplication"))
+            {
+                System.Diagnostics.EventLog.CreateEventSource("TestApplication", "Application");
+            }
+
+            // Set the source name for writing log entries.
+            eventLog1.Source = "TestApplication";
+
+            // Create an event ID to add to the event log
+            int eventID = 8;
+
+            // Write an entry to the event log.
+            eventLog1.WriteEntry(message,
+                                System.Diagnostics.EventLogEntryType.Error,
+                                eventID);
+
+            // Close the Event Log
+            eventLog1.Close();
+        }
+
+
+
     }
 }
