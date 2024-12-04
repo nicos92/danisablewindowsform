@@ -235,7 +235,7 @@
             this.groupBox3.Size = new System.Drawing.Size(176, 190);
             this.groupBox3.TabIndex = 10;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "groupBox3";
+            this.groupBox3.Text = "Combo Box";
             // 
             // button3
             // 

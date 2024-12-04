@@ -35,20 +35,7 @@ namespace Curso_Clase_3
             }
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            if (_abrirPanelBottom)
-            {
-                _abrirPanelBottom = false;
-                PanelBottom.Height = PanelBottom.Height / 2;
-            }
-            else
-            {
-                _abrirPanelBottom = true;
-                PanelBottom.Height = PanelBottom.Height * 2;
-            }
-        }
-
+       
         private void button5_Click(object sender, EventArgs e)
         {
             if (_abrirPanelRight)
@@ -72,6 +59,20 @@ namespace Curso_Clase_3
         {
             toolStripStatusLabel2.Text = "¤" + this.Width + "x" + this.Height;
 
+        }
+
+        private void fuenteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (fontDialog1.ShowDialog() == DialogResult.OK)
+            {
+                this.Font = fontDialog1.Font;
+                menuStrip1.Font = fontDialog1.Font;
+            }
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
