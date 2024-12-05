@@ -120,5 +120,32 @@ namespace Calculadora
             }
             
         }
+
+        private void BtnApagar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void BtnPunto_Click(object sender, EventArgs e)
+        {
+            Texto.Append(",");
+            TxtCuenta.Text = Texto.ToString();
+        }
+
+        private void label1_MouseHover(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void BtnOff_MouseHover(object sender, EventArgs e)
+        {
+            BtnOff.Image = Calculadora.Properties.Resources.off1;
+        }
+
+        private void BtnOff_MouseLeave(object sender, EventArgs e)
+        {
+            BtnOff.Image = Calculadora.Properties.Resources.off;
+
+        }
     }
 }
