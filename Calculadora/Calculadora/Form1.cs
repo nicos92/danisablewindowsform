@@ -16,90 +16,75 @@ namespace Calculadora
         {
             InitializeComponent();
         }
-
-        private StringBuilder Texto = new StringBuilder();
+        
         private void Btn1_Click(object sender, EventArgs e)
         {
-            Texto.Append("1");
-            TxtCuenta.Text = Texto.ToString();
+            
         }
 
         private void Btn2_Click(object sender, EventArgs e)
         {
-            Texto.Append("2");
-            TxtCuenta.Text = Texto.ToString();
+            
         }
 
         private void Btn3_Click(object sender, EventArgs e)
         {
-            Texto.Append("3");
-            TxtCuenta.Text = Texto.ToString();
+          
         }
 
         private void Btn4_Click(object sender, EventArgs e)
         {
-            Texto.Append("4");
-            TxtCuenta.Text = Texto.ToString();
+           
         }
 
         private void Btn5_Click(object sender, EventArgs e)
         {
-            Texto.Append("5");
-            TxtCuenta.Text = Texto.ToString();
+           
         }
 
         private void Btn6_Click(object sender, EventArgs e)
         {
-            Texto.Append("6");
-            TxtCuenta.Text = Texto.ToString();
+            
         }
 
         private void Btn7_Click(object sender, EventArgs e)
         {
-            Texto.Append("7");
-            TxtCuenta.Text = Texto.ToString();
+            
         }
 
         private void Btn8_Click(object sender, EventArgs e)
         {
-            Texto.Append("8");
-            TxtCuenta.Text = Texto.ToString();
+            
         }
 
         private void Btn9_Click(object sender, EventArgs e)
         {
-            Texto.Append("9");
-            TxtCuenta.Text = Texto.ToString();
+            
         }
 
         private void Btn0_Click(object sender, EventArgs e)
         {
-            Texto.Append("0");
-            TxtCuenta.Text = Texto.ToString();
+            
         }
 
         private void BtnDividir_Click(object sender, EventArgs e)
         {
-            Texto.Append("/");
-            TxtCuenta.Text = Texto.ToString();
+           
         }
 
         private void BtnMultiplicar_Click(object sender, EventArgs e)
         {
-            Texto.Append("x");
-            TxtCuenta.Text = Texto.ToString();
+           
         }
 
         private void BtnMenos_Click(object sender, EventArgs e)
         {
-            Texto.Append("-");
-            TxtCuenta.Text = Texto.ToString();
+            
         }
 
         private void BtnMas_Click(object sender, EventArgs e)
         {
-            Texto.Append("+");
-            TxtCuenta.Text = Texto.ToString();
+           
         }
 
         private void BtnIgual_Click(object sender, EventArgs e)
@@ -109,43 +94,90 @@ namespace Calculadora
 
         private void TxtCuenta_TextChanged(object sender, EventArgs e)
         {
+            /*if (!(Texto[Texto.Length] > 41 && Texto[Texto.Length] < 58))
+            {
+                BorrarUltimoCaracter();
 
+            }*/
         }
 
         private void TxtCuenta_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (char.IsLetter(e.KeyChar))
+            if (e.KeyChar > 41 && e.KeyChar < 58)
             {
                 e.Handled = true;
+               
+
             }
-            
+
         }
 
-        private void BtnApagar_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+
 
         private void BtnPunto_Click(object sender, EventArgs e)
         {
-            Texto.Append(",");
-            TxtCuenta.Text = Texto.ToString();
+            
         }
 
         private void label1_MouseHover(object sender, EventArgs e)
         {
-            
+
         }
 
         private void BtnOff_MouseHover(object sender, EventArgs e)
         {
-            BtnOff.Image = Calculadora.Properties.Resources.off1;
+            BtnOff.Image = Properties.Resources.off1;
         }
 
         private void BtnOff_MouseLeave(object sender, EventArgs e)
         {
-            BtnOff.Image = Calculadora.Properties.Resources.off;
+            BtnOff.Image = Properties.Resources.off;
 
+        }
+
+        private void BtnHistorial_MouseHover(object sender, EventArgs e)
+        {
+            BtnHistorial.Image = Properties.Resources.history1;
+
+        }
+
+        private void BtnHistorial_MouseLeave(object sender, EventArgs e)
+        {
+            BtnHistorial.Image = Properties.Resources.history;
+
+        }
+
+        private void BtnOff_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+
+        }
+
+        private void BtnCE_Click(object sender, EventArgs e)
+        {
+            LimpiarText();
+        }
+
+        private void LimpiarText()
+        {
+            TxtCuenta.Text = "";
+            
+        }
+
+        private void BtnC_Click(object sender, EventArgs e)
+        {
+            TxtCuenta.Text = "";
+            
+        }
+
+        private void BtnBorrar_Click(object sender, EventArgs e)
+        {
+            BorrarUltimoCaracter();
+        }
+
+        private void BorrarUltimoCaracter()
+        {
+            
         }
     }
 }
