@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Svg, Version=2.2.1.39233, Culture=neutral, PublicKeyToken=12a0bac221edeae2, processorArchitecture=MSIL">
+      <HintPath>..\packages\Svg.2.3.0\lib\net35\Svg.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -67,6 +71,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -94,6 +99,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\borrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9.svg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

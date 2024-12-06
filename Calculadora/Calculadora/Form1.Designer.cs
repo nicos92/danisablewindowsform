@@ -33,33 +33,34 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.PanelCenter = new System.Windows.Forms.Panel();
             this.TablaBotones = new System.Windows.Forms.TableLayoutPanel();
-            this.BtnIgual = new System.Windows.Forms.Button();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.BtnPunto = new System.Windows.Forms.Button();
             this.Btn0 = new System.Windows.Forms.Button();
             this.BtnMasMenos = new System.Windows.Forms.Button();
-            this.BtnMas = new System.Windows.Forms.Button();
             this.Btn3 = new System.Windows.Forms.Button();
             this.Btn2 = new System.Windows.Forms.Button();
             this.Btn1 = new System.Windows.Forms.Button();
-            this.BtnMenos = new System.Windows.Forms.Button();
             this.Btn6 = new System.Windows.Forms.Button();
             this.Btn5 = new System.Windows.Forms.Button();
             this.Btn4 = new System.Windows.Forms.Button();
-            this.BtnMultiplicar = new System.Windows.Forms.Button();
             this.Btn9 = new System.Windows.Forms.Button();
             this.Btn8 = new System.Windows.Forms.Button();
             this.Btn7 = new System.Windows.Forms.Button();
-            this.BtnDividir = new System.Windows.Forms.Button();
             this.BtnC = new System.Windows.Forms.Button();
             this.BtnCE = new System.Windows.Forms.Button();
             this.PanelTop = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.TxtCuenta = new System.Windows.Forms.TextBox();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.BtnIgual = new System.Windows.Forms.Button();
+            this.BtnMas = new System.Windows.Forms.Button();
+            this.BtnMenos = new System.Windows.Forms.Button();
+            this.BtnMultiplicar = new System.Windows.Forms.Button();
+            this.BtnDividir = new System.Windows.Forms.Button();
             this.BtnBorrar = new System.Windows.Forms.Button();
             this.BtnHistorial = new System.Windows.Forms.PictureBox();
             this.BtnOff = new System.Windows.Forms.PictureBox();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.tableLayoutPanel1.SuspendLayout();
             this.PanelCenter.SuspendLayout();
             this.TablaBotones.SuspendLayout();
@@ -136,30 +137,30 @@
             this.TablaBotones.Size = new System.Drawing.Size(434, 394);
             this.TablaBotones.TabIndex = 1;
             // 
-            // BtnIgual
+            // imageList1
             // 
-            this.BtnIgual.BackColor = System.Drawing.Color.LightGreen;
-            this.BtnIgual.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnIgual.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnIgual.Font = new System.Drawing.Font("Hack Nerd Font", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnIgual.ImageIndex = 5;
-            this.BtnIgual.ImageList = this.imageList1;
-            this.BtnIgual.Location = new System.Drawing.Point(327, 315);
-            this.BtnIgual.Name = "BtnIgual";
-            this.BtnIgual.Size = new System.Drawing.Size(104, 76);
-            this.BtnIgual.TabIndex = 19;
-            this.toolTip1.SetToolTip(this.BtnIgual, "Igual, hace la cuenta escrita");
-            this.BtnIgual.UseVisualStyleBackColor = false;
-            this.BtnIgual.Click += new System.EventHandler(this.BtnIgual_Click);
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "off.png");
+            this.imageList1.Images.SetKeyName(1, "borrar.png");
+            this.imageList1.Images.SetKeyName(2, "anadir.png");
+            this.imageList1.Images.SetKeyName(3, "cruz-oscura-bruta.png");
+            this.imageList1.Images.SetKeyName(4, "dividir.png");
+            this.imageList1.Images.SetKeyName(5, "igual.png");
+            this.imageList1.Images.SetKeyName(6, "signo-menos-de-una-linea-en-posicion-horizontal.png");
+            this.imageList1.Images.SetKeyName(7, "calculadora (1).png");
+            this.imageList1.Images.SetKeyName(8, "calculadora (2).png");
+            this.imageList1.Images.SetKeyName(9, "ce.png");
             // 
             // BtnPunto
             // 
             this.BtnPunto.Dock = System.Windows.Forms.DockStyle.Fill;
             this.BtnPunto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnPunto.Font = new System.Drawing.Font("Hack Nerd Font", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnPunto.Location = new System.Drawing.Point(219, 315);
+            this.BtnPunto.Location = new System.Drawing.Point(221, 317);
+            this.BtnPunto.Margin = new System.Windows.Forms.Padding(5);
             this.BtnPunto.Name = "BtnPunto";
-            this.BtnPunto.Size = new System.Drawing.Size(102, 76);
+            this.BtnPunto.Size = new System.Drawing.Size(98, 72);
             this.BtnPunto.TabIndex = 18;
             this.BtnPunto.Text = ".";
             this.BtnPunto.UseVisualStyleBackColor = true;
@@ -170,9 +171,10 @@
             this.Btn0.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Btn0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn0.Font = new System.Drawing.Font("Hack Nerd Font", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn0.Location = new System.Drawing.Point(111, 315);
+            this.Btn0.Location = new System.Drawing.Point(113, 317);
+            this.Btn0.Margin = new System.Windows.Forms.Padding(5);
             this.Btn0.Name = "Btn0";
-            this.Btn0.Size = new System.Drawing.Size(102, 76);
+            this.Btn0.Size = new System.Drawing.Size(98, 72);
             this.Btn0.TabIndex = 17;
             this.Btn0.Text = "0";
             this.Btn0.UseVisualStyleBackColor = true;
@@ -183,36 +185,23 @@
             this.BtnMasMenos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.BtnMasMenos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnMasMenos.Font = new System.Drawing.Font("Hack Nerd Font", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnMasMenos.Location = new System.Drawing.Point(3, 315);
+            this.BtnMasMenos.Location = new System.Drawing.Point(5, 317);
+            this.BtnMasMenos.Margin = new System.Windows.Forms.Padding(5);
             this.BtnMasMenos.Name = "BtnMasMenos";
-            this.BtnMasMenos.Size = new System.Drawing.Size(102, 76);
+            this.BtnMasMenos.Size = new System.Drawing.Size(98, 72);
             this.BtnMasMenos.TabIndex = 16;
             this.BtnMasMenos.Text = "+/-";
             this.BtnMasMenos.UseVisualStyleBackColor = true;
-            // 
-            // BtnMas
-            // 
-            this.BtnMas.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.BtnMas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnMas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnMas.Font = new System.Drawing.Font("Hack Nerd Font", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnMas.ImageIndex = 2;
-            this.BtnMas.ImageList = this.imageList1;
-            this.BtnMas.Location = new System.Drawing.Point(327, 237);
-            this.BtnMas.Name = "BtnMas";
-            this.BtnMas.Size = new System.Drawing.Size(104, 72);
-            this.BtnMas.TabIndex = 15;
-            this.BtnMas.UseVisualStyleBackColor = false;
-            this.BtnMas.Click += new System.EventHandler(this.BtnMas_Click);
             // 
             // Btn3
             // 
             this.Btn3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Btn3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn3.Font = new System.Drawing.Font("Hack Nerd Font", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn3.Location = new System.Drawing.Point(219, 237);
+            this.Btn3.Location = new System.Drawing.Point(221, 239);
+            this.Btn3.Margin = new System.Windows.Forms.Padding(5);
             this.Btn3.Name = "Btn3";
-            this.Btn3.Size = new System.Drawing.Size(102, 72);
+            this.Btn3.Size = new System.Drawing.Size(98, 68);
             this.Btn3.TabIndex = 14;
             this.Btn3.Text = "3";
             this.Btn3.UseVisualStyleBackColor = true;
@@ -223,9 +212,10 @@
             this.Btn2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Btn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn2.Font = new System.Drawing.Font("Hack Nerd Font", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn2.Location = new System.Drawing.Point(111, 237);
+            this.Btn2.Location = new System.Drawing.Point(113, 239);
+            this.Btn2.Margin = new System.Windows.Forms.Padding(5);
             this.Btn2.Name = "Btn2";
-            this.Btn2.Size = new System.Drawing.Size(102, 72);
+            this.Btn2.Size = new System.Drawing.Size(98, 68);
             this.Btn2.TabIndex = 13;
             this.Btn2.Text = "2";
             this.Btn2.UseVisualStyleBackColor = true;
@@ -236,37 +226,24 @@
             this.Btn1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Btn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn1.Font = new System.Drawing.Font("Hack Nerd Font", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn1.Location = new System.Drawing.Point(3, 237);
+            this.Btn1.Location = new System.Drawing.Point(5, 239);
+            this.Btn1.Margin = new System.Windows.Forms.Padding(5);
             this.Btn1.Name = "Btn1";
-            this.Btn1.Size = new System.Drawing.Size(102, 72);
+            this.Btn1.Size = new System.Drawing.Size(98, 68);
             this.Btn1.TabIndex = 12;
             this.Btn1.Text = "1";
             this.Btn1.UseVisualStyleBackColor = true;
             this.Btn1.Click += new System.EventHandler(this.Btn1_Click);
-            // 
-            // BtnMenos
-            // 
-            this.BtnMenos.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.BtnMenos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnMenos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnMenos.Font = new System.Drawing.Font("Hack Nerd Font", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnMenos.ImageIndex = 6;
-            this.BtnMenos.ImageList = this.imageList1;
-            this.BtnMenos.Location = new System.Drawing.Point(327, 159);
-            this.BtnMenos.Name = "BtnMenos";
-            this.BtnMenos.Size = new System.Drawing.Size(104, 72);
-            this.BtnMenos.TabIndex = 11;
-            this.BtnMenos.UseVisualStyleBackColor = false;
-            this.BtnMenos.Click += new System.EventHandler(this.BtnMenos_Click);
             // 
             // Btn6
             // 
             this.Btn6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Btn6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn6.Font = new System.Drawing.Font("Hack Nerd Font", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn6.Location = new System.Drawing.Point(219, 159);
+            this.Btn6.Location = new System.Drawing.Point(221, 161);
+            this.Btn6.Margin = new System.Windows.Forms.Padding(5);
             this.Btn6.Name = "Btn6";
-            this.Btn6.Size = new System.Drawing.Size(102, 72);
+            this.Btn6.Size = new System.Drawing.Size(98, 68);
             this.Btn6.TabIndex = 10;
             this.Btn6.Text = "6";
             this.Btn6.UseVisualStyleBackColor = true;
@@ -277,9 +254,10 @@
             this.Btn5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Btn5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn5.Font = new System.Drawing.Font("Hack Nerd Font", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn5.Location = new System.Drawing.Point(111, 159);
+            this.Btn5.Location = new System.Drawing.Point(113, 161);
+            this.Btn5.Margin = new System.Windows.Forms.Padding(5);
             this.Btn5.Name = "Btn5";
-            this.Btn5.Size = new System.Drawing.Size(102, 72);
+            this.Btn5.Size = new System.Drawing.Size(98, 68);
             this.Btn5.TabIndex = 9;
             this.Btn5.Text = "5";
             this.Btn5.UseVisualStyleBackColor = true;
@@ -290,37 +268,24 @@
             this.Btn4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Btn4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn4.Font = new System.Drawing.Font("Hack Nerd Font", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn4.Location = new System.Drawing.Point(3, 159);
+            this.Btn4.Location = new System.Drawing.Point(5, 161);
+            this.Btn4.Margin = new System.Windows.Forms.Padding(5);
             this.Btn4.Name = "Btn4";
-            this.Btn4.Size = new System.Drawing.Size(102, 72);
+            this.Btn4.Size = new System.Drawing.Size(98, 68);
             this.Btn4.TabIndex = 8;
             this.Btn4.Text = "4";
             this.Btn4.UseVisualStyleBackColor = true;
             this.Btn4.Click += new System.EventHandler(this.Btn4_Click);
-            // 
-            // BtnMultiplicar
-            // 
-            this.BtnMultiplicar.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.BtnMultiplicar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnMultiplicar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnMultiplicar.Font = new System.Drawing.Font("Hack Nerd Font", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnMultiplicar.ImageIndex = 3;
-            this.BtnMultiplicar.ImageList = this.imageList1;
-            this.BtnMultiplicar.Location = new System.Drawing.Point(327, 81);
-            this.BtnMultiplicar.Name = "BtnMultiplicar";
-            this.BtnMultiplicar.Size = new System.Drawing.Size(104, 72);
-            this.BtnMultiplicar.TabIndex = 7;
-            this.BtnMultiplicar.UseVisualStyleBackColor = false;
-            this.BtnMultiplicar.Click += new System.EventHandler(this.BtnMultiplicar_Click);
             // 
             // Btn9
             // 
             this.Btn9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Btn9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn9.Font = new System.Drawing.Font("Hack Nerd Font", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn9.Location = new System.Drawing.Point(219, 81);
+            this.Btn9.Location = new System.Drawing.Point(221, 83);
+            this.Btn9.Margin = new System.Windows.Forms.Padding(5);
             this.Btn9.Name = "Btn9";
-            this.Btn9.Size = new System.Drawing.Size(102, 72);
+            this.Btn9.Size = new System.Drawing.Size(98, 68);
             this.Btn9.TabIndex = 6;
             this.Btn9.Text = "9";
             this.Btn9.UseVisualStyleBackColor = true;
@@ -331,9 +296,10 @@
             this.Btn8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Btn8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn8.Font = new System.Drawing.Font("Hack Nerd Font", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn8.Location = new System.Drawing.Point(111, 81);
+            this.Btn8.Location = new System.Drawing.Point(113, 83);
+            this.Btn8.Margin = new System.Windows.Forms.Padding(5);
             this.Btn8.Name = "Btn8";
-            this.Btn8.Size = new System.Drawing.Size(102, 72);
+            this.Btn8.Size = new System.Drawing.Size(98, 68);
             this.Btn8.TabIndex = 5;
             this.Btn8.Text = "8";
             this.Btn8.UseVisualStyleBackColor = true;
@@ -344,28 +310,14 @@
             this.Btn7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Btn7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn7.Font = new System.Drawing.Font("Hack Nerd Font", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn7.Location = new System.Drawing.Point(3, 81);
+            this.Btn7.Location = new System.Drawing.Point(5, 83);
+            this.Btn7.Margin = new System.Windows.Forms.Padding(5);
             this.Btn7.Name = "Btn7";
-            this.Btn7.Size = new System.Drawing.Size(102, 72);
+            this.Btn7.Size = new System.Drawing.Size(98, 68);
             this.Btn7.TabIndex = 4;
             this.Btn7.Text = "7";
             this.Btn7.UseVisualStyleBackColor = true;
             this.Btn7.Click += new System.EventHandler(this.Btn7_Click);
-            // 
-            // BtnDividir
-            // 
-            this.BtnDividir.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.BtnDividir.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnDividir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnDividir.Font = new System.Drawing.Font("Hack Nerd Font", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnDividir.ImageIndex = 4;
-            this.BtnDividir.ImageList = this.imageList1;
-            this.BtnDividir.Location = new System.Drawing.Point(327, 3);
-            this.BtnDividir.Name = "BtnDividir";
-            this.BtnDividir.Size = new System.Drawing.Size(104, 72);
-            this.BtnDividir.TabIndex = 3;
-            this.BtnDividir.UseVisualStyleBackColor = false;
-            this.BtnDividir.Click += new System.EventHandler(this.BtnDividir_Click);
             // 
             // BtnC
             // 
@@ -374,9 +326,10 @@
             this.BtnC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnC.Font = new System.Drawing.Font("Hack Nerd Font", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnC.ImageIndex = 9;
-            this.BtnC.Location = new System.Drawing.Point(111, 3);
+            this.BtnC.Location = new System.Drawing.Point(113, 5);
+            this.BtnC.Margin = new System.Windows.Forms.Padding(5);
             this.BtnC.Name = "BtnC";
-            this.BtnC.Size = new System.Drawing.Size(102, 72);
+            this.BtnC.Size = new System.Drawing.Size(98, 68);
             this.BtnC.TabIndex = 1;
             this.BtnC.Text = "CE";
             this.BtnC.UseVisualStyleBackColor = false;
@@ -389,9 +342,10 @@
             this.BtnCE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCE.Font = new System.Drawing.Font("Hack Nerd Font", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCE.ImageIndex = 8;
-            this.BtnCE.Location = new System.Drawing.Point(3, 3);
+            this.BtnCE.Location = new System.Drawing.Point(5, 5);
+            this.BtnCE.Margin = new System.Windows.Forms.Padding(5);
             this.BtnCE.Name = "BtnCE";
-            this.BtnCE.Size = new System.Drawing.Size(102, 72);
+            this.BtnCE.Size = new System.Drawing.Size(98, 68);
             this.BtnCE.TabIndex = 0;
             this.BtnCE.Text = "C";
             this.BtnCE.UseVisualStyleBackColor = false;
@@ -431,20 +385,86 @@
             this.TxtCuenta.TextChanged += new System.EventHandler(this.TxtCuenta_TextChanged);
             this.TxtCuenta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCuenta_KeyPress);
             // 
-            // imageList1
+            // BtnIgual
             // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "off.png");
-            this.imageList1.Images.SetKeyName(1, "borrar.png");
-            this.imageList1.Images.SetKeyName(2, "anadir.png");
-            this.imageList1.Images.SetKeyName(3, "cruz-oscura-bruta.png");
-            this.imageList1.Images.SetKeyName(4, "dividir.png");
-            this.imageList1.Images.SetKeyName(5, "igual.png");
-            this.imageList1.Images.SetKeyName(6, "signo-menos-de-una-linea-en-posicion-horizontal.png");
-            this.imageList1.Images.SetKeyName(7, "calculadora (1).png");
-            this.imageList1.Images.SetKeyName(8, "calculadora (2).png");
-            this.imageList1.Images.SetKeyName(9, "ce.png");
+            this.BtnIgual.BackColor = System.Drawing.Color.LightGreen;
+            this.BtnIgual.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnIgual.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnIgual.Font = new System.Drawing.Font("Hack Nerd Font", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnIgual.ImageIndex = 5;
+            this.BtnIgual.ImageList = this.imageList1;
+            this.BtnIgual.Location = new System.Drawing.Point(329, 317);
+            this.BtnIgual.Margin = new System.Windows.Forms.Padding(5);
+            this.BtnIgual.Name = "BtnIgual";
+            this.BtnIgual.Size = new System.Drawing.Size(100, 72);
+            this.BtnIgual.TabIndex = 19;
+            this.toolTip1.SetToolTip(this.BtnIgual, "Igual, hace la cuenta escrita");
+            this.BtnIgual.UseVisualStyleBackColor = false;
+            this.BtnIgual.Click += new System.EventHandler(this.BtnIgual_Click);
+            // 
+            // BtnMas
+            // 
+            this.BtnMas.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.BtnMas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnMas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnMas.Font = new System.Drawing.Font("Hack Nerd Font", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnMas.ImageIndex = 2;
+            this.BtnMas.ImageList = this.imageList1;
+            this.BtnMas.Location = new System.Drawing.Point(329, 239);
+            this.BtnMas.Margin = new System.Windows.Forms.Padding(5);
+            this.BtnMas.Name = "BtnMas";
+            this.BtnMas.Size = new System.Drawing.Size(100, 68);
+            this.BtnMas.TabIndex = 15;
+            this.BtnMas.UseVisualStyleBackColor = false;
+            this.BtnMas.Click += new System.EventHandler(this.BtnMas_Click);
+            // 
+            // BtnMenos
+            // 
+            this.BtnMenos.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.BtnMenos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnMenos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnMenos.Font = new System.Drawing.Font("Hack Nerd Font", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnMenos.ImageIndex = 6;
+            this.BtnMenos.ImageList = this.imageList1;
+            this.BtnMenos.Location = new System.Drawing.Point(329, 161);
+            this.BtnMenos.Margin = new System.Windows.Forms.Padding(5);
+            this.BtnMenos.Name = "BtnMenos";
+            this.BtnMenos.Size = new System.Drawing.Size(100, 68);
+            this.BtnMenos.TabIndex = 11;
+            this.BtnMenos.UseVisualStyleBackColor = false;
+            this.BtnMenos.Click += new System.EventHandler(this.BtnMenos_Click);
+            // 
+            // BtnMultiplicar
+            // 
+            this.BtnMultiplicar.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.BtnMultiplicar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnMultiplicar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnMultiplicar.Font = new System.Drawing.Font("Hack Nerd Font", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnMultiplicar.ImageIndex = 3;
+            this.BtnMultiplicar.ImageList = this.imageList1;
+            this.BtnMultiplicar.Location = new System.Drawing.Point(329, 83);
+            this.BtnMultiplicar.Margin = new System.Windows.Forms.Padding(5);
+            this.BtnMultiplicar.Name = "BtnMultiplicar";
+            this.BtnMultiplicar.Size = new System.Drawing.Size(100, 68);
+            this.BtnMultiplicar.TabIndex = 7;
+            this.BtnMultiplicar.UseVisualStyleBackColor = false;
+            this.BtnMultiplicar.Click += new System.EventHandler(this.BtnMultiplicar_Click);
+            // 
+            // BtnDividir
+            // 
+            this.BtnDividir.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.BtnDividir.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnDividir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnDividir.Font = new System.Drawing.Font("Hack Nerd Font", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnDividir.ImageIndex = 4;
+            this.BtnDividir.ImageList = this.imageList1;
+            this.BtnDividir.Location = new System.Drawing.Point(329, 5);
+            this.BtnDividir.Margin = new System.Windows.Forms.Padding(5);
+            this.BtnDividir.Name = "BtnDividir";
+            this.BtnDividir.Size = new System.Drawing.Size(100, 68);
+            this.BtnDividir.TabIndex = 3;
+            this.BtnDividir.UseVisualStyleBackColor = false;
+            this.BtnDividir.Click += new System.EventHandler(this.BtnDividir_Click);
             // 
             // BtnBorrar
             // 
@@ -454,9 +474,10 @@
             this.BtnBorrar.Font = new System.Drawing.Font("Hack Nerd Font", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnBorrar.ImageIndex = 1;
             this.BtnBorrar.ImageList = this.imageList1;
-            this.BtnBorrar.Location = new System.Drawing.Point(219, 3);
+            this.BtnBorrar.Location = new System.Drawing.Point(221, 5);
+            this.BtnBorrar.Margin = new System.Windows.Forms.Padding(5);
             this.BtnBorrar.Name = "BtnBorrar";
-            this.BtnBorrar.Size = new System.Drawing.Size(102, 72);
+            this.BtnBorrar.Size = new System.Drawing.Size(98, 68);
             this.BtnBorrar.TabIndex = 2;
             this.BtnBorrar.UseVisualStyleBackColor = false;
             this.BtnBorrar.Click += new System.EventHandler(this.BtnBorrar_Click);
@@ -496,6 +517,10 @@
             this.BtnOff.MouseLeave += new System.EventHandler(this.BtnOff_MouseLeave);
             this.BtnOff.MouseHover += new System.EventHandler(this.BtnOff_MouseHover);
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // FormMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -510,6 +535,7 @@
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calculadora";
+            this.Load += new System.EventHandler(this.FormMain_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.PanelCenter.ResumeLayout(false);
             this.TablaBotones.ResumeLayout(false);
@@ -555,6 +581,7 @@
         private System.Windows.Forms.PictureBox BtnOff;
         private System.Windows.Forms.PictureBox BtnHistorial;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
 

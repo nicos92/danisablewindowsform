@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using Svg;
+using System.Reflection;
 
 namespace Calculadora
 {
@@ -16,75 +19,78 @@ namespace Calculadora
         {
             InitializeComponent();
         }
-        
+
+
+
+
         private void Btn1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void Btn2_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void Btn3_Click(object sender, EventArgs e)
         {
-          
+
         }
 
         private void Btn4_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void Btn5_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void Btn6_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void Btn7_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void Btn8_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void Btn9_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void Btn0_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void BtnDividir_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void BtnMultiplicar_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void BtnMenos_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void BtnMas_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void BtnIgual_Click(object sender, EventArgs e)
@@ -106,7 +112,7 @@ namespace Calculadora
             if (e.KeyChar > 41 && e.KeyChar < 58)
             {
                 e.Handled = true;
-               
+
 
             }
 
@@ -116,7 +122,7 @@ namespace Calculadora
 
         private void BtnPunto_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void label1_MouseHover(object sender, EventArgs e)
@@ -161,13 +167,13 @@ namespace Calculadora
         private void LimpiarText()
         {
             TxtCuenta.Text = "";
-            
+
         }
 
         private void BtnC_Click(object sender, EventArgs e)
         {
             TxtCuenta.Text = "";
-            
+
         }
 
         private void BtnBorrar_Click(object sender, EventArgs e)
@@ -177,7 +183,20 @@ namespace Calculadora
 
         private void BorrarUltimoCaracter()
         {
-            
+
+        }
+
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+
+
+            var svg = SvgDocument.Open(@"d:\Users\n.sandoval\Music\windowsform\Calculadora\Calculadora\Resources\4.svg");
+            svg.Fill = new SvgColourServer(Color.Red);
+            svg.Width = new SvgUnit(SvgUnitType.Pixel, 100);  // Cambiar el ancho a 500 píxeles
+            svg.Height = new SvgUnit(SvgUnitType.Pixel, 100);
+            BtnHistorial.Image = svg.Draw();
+
+
         }
     }
 }
