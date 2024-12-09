@@ -8,8 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
-using Svg;
 using System.Reflection;
+using Svg;
 
 namespace Calculadora
 {
@@ -22,74 +22,95 @@ namespace Calculadora
 
 
 
+        private void EnviarTecla(string tecla)
+        {
+            TxtCuenta.Focus();
+            SendKeys.Send(tecla);
+        }
+
 
         private void Btn1_Click(object sender, EventArgs e)
         {
-
+            EnviarTecla("1");
         }
+
+        
 
         private void Btn2_Click(object sender, EventArgs e)
         {
+            EnviarTecla("2");
 
         }
 
         private void Btn3_Click(object sender, EventArgs e)
         {
+            EnviarTecla("3");
 
         }
 
         private void Btn4_Click(object sender, EventArgs e)
         {
+            EnviarTecla("4");
 
         }
 
         private void Btn5_Click(object sender, EventArgs e)
         {
+            EnviarTecla("5");
 
         }
 
         private void Btn6_Click(object sender, EventArgs e)
         {
+            EnviarTecla("6");
 
         }
 
         private void Btn7_Click(object sender, EventArgs e)
         {
+            EnviarTecla("7");
 
         }
 
         private void Btn8_Click(object sender, EventArgs e)
         {
+            EnviarTecla("8");
 
         }
 
         private void Btn9_Click(object sender, EventArgs e)
         {
+            EnviarTecla("9");
 
         }
 
         private void Btn0_Click(object sender, EventArgs e)
         {
+            EnviarTecla("0");
 
         }
 
         private void BtnDividir_Click(object sender, EventArgs e)
         {
+            EnviarTecla("/");
 
         }
 
         private void BtnMultiplicar_Click(object sender, EventArgs e)
         {
+            EnviarTecla("*");
 
         }
 
         private void BtnMenos_Click(object sender, EventArgs e)
         {
+            EnviarTecla("-");
 
         }
 
         private void BtnMas_Click(object sender, EventArgs e)
         {
+            EnviarTecla("+");
 
         }
 
@@ -109,11 +130,25 @@ namespace Calculadora
 
         private void TxtCuenta_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar > 41 && e.KeyChar < 58)
+            // para ingresar * + - / , . 0123456789
+            if (!(e.KeyChar > 41 && e.KeyChar < 58) )
             {
                 e.Handled = true;
 
 
+            }
+
+            // para borrar con tecla suprimir
+
+            if ((e.KeyChar) == 127)
+            {
+                e.Handled = false;
+            }
+
+            // para borrar normal
+            if ((e.KeyChar) == 8)
+            {
+                e.Handled = false;
             }
 
         }
@@ -122,13 +157,11 @@ namespace Calculadora
 
         private void BtnPunto_Click(object sender, EventArgs e)
         {
+            EnviarTecla(",");
 
         }
 
-        private void label1_MouseHover(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void BtnOff_MouseHover(object sender, EventArgs e)
         {
@@ -178,6 +211,8 @@ namespace Calculadora
 
         private void BtnBorrar_Click(object sender, EventArgs e)
         {
+
+            // TODO rehacer
             BorrarUltimoCaracter();
         }
 
@@ -189,14 +224,14 @@ namespace Calculadora
         private void FormMain_Load(object sender, EventArgs e)
         {
 
-
+            /*
             var svg = SvgDocument.Open(@"d:\Users\n.sandoval\Music\windowsform\Calculadora\Calculadora\Resources\4.svg");
             svg.Fill = new SvgColourServer(Color.Red);
             svg.Width = new SvgUnit(SvgUnitType.Pixel, 100);  // Cambiar el ancho a 500 píxeles
             svg.Height = new SvgUnit(SvgUnitType.Pixel, 100);
             BtnHistorial.Image = svg.Draw();
-
-
+            */
+    
         }
     }
 }
