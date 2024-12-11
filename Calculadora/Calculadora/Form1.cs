@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Reflection;
 using Svg;
+using System.Text.RegularExpressions;
 
 namespace Calculadora
 {
@@ -19,6 +20,9 @@ namespace Calculadora
         {
             InitializeComponent();
         }
+
+        private string pattern = @"(/|\*|-|\+|\.|,){2,}";
+
 
 
 
@@ -34,7 +38,7 @@ namespace Calculadora
             EnviarTecla("1");
         }
 
-        
+
 
         private void Btn2_Click(object sender, EventArgs e)
         {
@@ -114,6 +118,13 @@ namespace Calculadora
 
         }
 
+
+        private void BtnPunto_Click(object sender, EventArgs e)
+        {
+            EnviarTecla(",");
+
+        }
+
         private void BtnIgual_Click(object sender, EventArgs e)
         {
             // hacer la cuenta
@@ -121,22 +132,23 @@ namespace Calculadora
 
         private void TxtCuenta_TextChanged(object sender, EventArgs e)
         {
-            /*if (!(Texto[Texto.Length] > 41 && Texto[Texto.Length] < 58))
+            if (Regex.IsMatch(TxtCuenta.Text, pattern))
             {
-                BorrarUltimoCaracter();
+                int cursor = TxtCuenta.SelectionStart;
 
-            }*/
+
+                TxtCuenta.Text = TxtCuenta.Text.Remove(cursor - 2, 1);
+                TxtCuenta.SelectionStart = cursor - 1;
+            }
         }
 
         private void TxtCuenta_KeyPress(object sender, KeyPressEventArgs e)
         {
             // para ingresar * + - / , . 0123456789
-            if (!(e.KeyChar > 41 && e.KeyChar < 58) )
-            {
-                e.Handled = true;
+
+            e.Handled = (e.KeyChar <= 41 || e.KeyChar >= 58);
 
 
-            }
 
             // para borrar con tecla suprimir
 
@@ -155,13 +167,8 @@ namespace Calculadora
 
 
 
-        private void BtnPunto_Click(object sender, EventArgs e)
-        {
-            EnviarTecla(",");
 
-        }
 
-        
 
         private void BtnOff_MouseHover(object sender, EventArgs e)
         {
@@ -231,7 +238,7 @@ namespace Calculadora
             svg.Height = new SvgUnit(SvgUnitType.Pixel, 100);
             BtnHistorial.Image = svg.Draw();
             */
-    
+
         }
     }
 }
