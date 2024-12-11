@@ -24,13 +24,32 @@ namespace Calculadora
         private string pattern = @"(\/|\*|\-|\+|\.|,){2,}";
         private string elCaracter = "";
 
+
         private void EnviarTecla(string tecla)
         {
             TxtCuenta.Focus();
-            elCaracter = tecla;
+
+            elCaracter = SeleccionarCaracter(tecla);
             SendKeys.Send(tecla);
         }
 
+        public string SeleccionarCaracter(string caracter)
+        {
+            switch (caracter)
+            {
+                case "{ADD}":
+                    return "+";
+                    
+                case "{MULTIPLY}":
+                    return "*";
+                case "{DIVIDE}":
+                    return "/";
+                case "{SUBTRACT}":
+                    return "-";
+                
+            }
+            return caracter;
+        }
 
         private void Btn1_Click(object sender, EventArgs e)
         {
@@ -95,25 +114,25 @@ namespace Calculadora
 
         private void BtnDividir_Click(object sender, EventArgs e)
         {
-            EnviarTecla("{DIVIDE}");
+            EnviarTecla(MisKeys.DIVIDIR);
 
         }
 
         private void BtnMultiplicar_Click(object sender, EventArgs e)
         {
-            EnviarTecla("{MULTIPLY}");
+            EnviarTecla(MisKeys.MULTI);
 
         }
 
         private void BtnMenos_Click(object sender, EventArgs e)
         {
-            EnviarTecla("{SUBTRACT}");
+            EnviarTecla(MisKeys.MENOS);
 
         }
 
         private void BtnMas_Click(object sender, EventArgs e)
         {
-            EnviarTecla("+");
+            EnviarTecla(MisKeys.MAS);
 
         }
 
