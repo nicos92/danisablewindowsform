@@ -21,14 +21,13 @@ namespace Calculadora
             InitializeComponent();
         }
 
-        private string pattern = @"(/|\*|-|\+|\.|,){2,}";
-
-
-
+        private string pattern = @"(\/|\*|\-|\+|\.|,){2,}";
+        private string elCaracter = "";
 
         private void EnviarTecla(string tecla)
         {
             TxtCuenta.Focus();
+            elCaracter = tecla;
             SendKeys.Send(tecla);
         }
 
@@ -96,19 +95,19 @@ namespace Calculadora
 
         private void BtnDividir_Click(object sender, EventArgs e)
         {
-            EnviarTecla("/");
+            EnviarTecla("{DIVIDE}");
 
         }
 
         private void BtnMultiplicar_Click(object sender, EventArgs e)
         {
-            EnviarTecla("*");
+            EnviarTecla("{MULTIPLY}");
 
         }
 
         private void BtnMenos_Click(object sender, EventArgs e)
         {
-            EnviarTecla("-");
+            EnviarTecla("{SUBTRACT}");
 
         }
 
@@ -132,13 +131,18 @@ namespace Calculadora
 
         private void TxtCuenta_TextChanged(object sender, EventArgs e)
         {
+            
             if (Regex.IsMatch(TxtCuenta.Text, pattern))
             {
+                /*
                 int cursor = TxtCuenta.SelectionStart;
 
 
                 TxtCuenta.Text = TxtCuenta.Text.Remove(cursor - 2, 1);
-                TxtCuenta.SelectionStart = cursor - 1;
+                TxtCuenta.SelectionStart = cursor - 1;*/
+                Console.WriteLine(elCaracter);
+                TxtCuenta.Text = Regex.Replace(TxtCuenta.Text, pattern, elCaracter, RegexOptions.CultureInvariant);
+                
             }
         }
 
@@ -146,7 +150,11 @@ namespace Calculadora
         {
             // para ingresar * + - / , . 0123456789
 
-            e.Handled = (e.KeyChar <= 41 || e.KeyChar >= 58);
+             if(e.KeyChar <= 41 || e.KeyChar >= 58)
+            {
+                elCaracter = e.KeyChar.ToString();
+                e.Handled = true;
+            }
 
 
 
@@ -162,6 +170,13 @@ namespace Calculadora
             {
                 e.Handled = false;
             }
+
+            // para borrar Todo apretando ESC
+            if ((e.KeyChar) == 27)
+            {
+                TxtCuenta.Text = "";
+            }
+
 
         }
 
@@ -219,14 +234,11 @@ namespace Calculadora
         private void BtnBorrar_Click(object sender, EventArgs e)
         {
 
-            // TODO rehacer
-            BorrarUltimoCaracter();
+            TxtCuenta.Focus();
+            SendKeys.Send("{BACKSPACE}");
         }
 
-        private void BorrarUltimoCaracter()
-        {
-
-        }
+   
 
         private void FormMain_Load(object sender, EventArgs e)
         {
