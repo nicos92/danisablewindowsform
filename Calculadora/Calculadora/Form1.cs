@@ -153,14 +153,13 @@ namespace Calculadora
             
             if (Regex.IsMatch(TxtCuenta.Text, pattern))
             {
-                /*
+                
                 int cursor = TxtCuenta.SelectionStart;
 
 
-                TxtCuenta.Text = TxtCuenta.Text.Remove(cursor - 2, 1);
-                TxtCuenta.SelectionStart = cursor - 1;*/
-                Console.WriteLine(elCaracter);
+                //TxtCuenta.Text = TxtCuenta.Text.Remove(cursor - 2, 1);
                 TxtCuenta.Text = Regex.Replace(TxtCuenta.Text, pattern, elCaracter, RegexOptions.CultureInvariant);
+                TxtCuenta.SelectionStart = cursor - 1;
                 
             }
         }
@@ -169,9 +168,13 @@ namespace Calculadora
         {
             // para ingresar * + - / , . 0123456789
 
-             if(e.KeyChar <= 41 || e.KeyChar >= 58)
+             if(e.KeyChar >= 41 && e.KeyChar <= 58)
             {
                 elCaracter = e.KeyChar.ToString();
+                e.Handled = false;
+            }
+            else
+            {
                 e.Handled = true;
             }
 
@@ -195,8 +198,8 @@ namespace Calculadora
             {
                 TxtCuenta.Text = "";
             }
-
-
+            
+            
         }
 
 
