@@ -61,6 +61,8 @@
             this.TxtCuenta = new System.Windows.Forms.TextBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.CartelError = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.PanelCenter.SuspendLayout();
             this.TablaBotones.SuspendLayout();
@@ -68,6 +70,7 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnHistorial)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnOff)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -461,6 +464,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.CartelError);
             this.panel1.Controls.Add(this.BtnHistorial);
             this.panel1.Controls.Add(this.BtnOff);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -506,13 +510,12 @@
             // 
             // TxtCuenta
             // 
-            this.TxtCuenta.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.TxtCuenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtCuenta.Font = new System.Drawing.Font("Iosevka NF", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtCuenta.Location = new System.Drawing.Point(0, 45);
             this.TxtCuenta.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
-            this.TxtCuenta.MaxLength = 15;
+            this.TxtCuenta.MaxLength = 18;
             this.TxtCuenta.Name = "TxtCuenta";
-            this.TxtCuenta.Size = new System.Drawing.Size(434, 62);
+            this.TxtCuenta.Size = new System.Drawing.Size(388, 67);
             this.TxtCuenta.TabIndex = 0;
             this.TxtCuenta.TextChanged += new System.EventHandler(this.TxtCuenta_TextChanged);
             this.TxtCuenta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCuenta_KeyPress);
@@ -520,6 +523,19 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // CartelError
+            // 
+            this.CartelError.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.CartelError.AutoSize = true;
+            this.CartelError.Location = new System.Drawing.Point(203, 9);
+            this.CartelError.Name = "CartelError";
+            this.CartelError.Size = new System.Drawing.Size(0, 20);
+            this.CartelError.TabIndex = 4;
             // 
             // FormMain
             // 
@@ -542,8 +558,10 @@
             this.PanelTop.ResumeLayout(false);
             this.PanelTop.PerformLayout();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnHistorial)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnOff)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -582,6 +600,8 @@
         private System.Windows.Forms.PictureBox BtnHistorial;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Label CartelError;
     }
 }
 

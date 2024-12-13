@@ -21,6 +21,8 @@ namespace Calculadora
             InitializeComponent();
         }
 
+        private char[] signos = { '/', '*', '-', '+'};
+
         private string pattern = @"(\/|\*|\-|\+|\.|,){2,}";
         private string elCaracter = "";
 
@@ -39,14 +41,14 @@ namespace Calculadora
             {
                 case "{ADD}":
                     return "+";
-                    
+
                 case "{MULTIPLY}":
                     return "*";
                 case "{DIVIDE}":
                     return "/";
                 case "{SUBTRACT}":
                     return "-";
-                
+
             }
             return caracter;
         }
@@ -114,13 +116,29 @@ namespace Calculadora
 
         private void BtnDividir_Click(object sender, EventArgs e)
         {
-            EnviarTecla(MisKeys.DIVIDIR);
+            EnviarTeclaAlPrincipio(MisKeys.DIVIDIR);
 
+        }
+
+        private void EnviarTeclaAlPrincipio(string tecla)
+        {
+            if (TxtCuenta.SelectionStart > 0)
+            {
+
+                EnviarTecla(tecla);
+            }
+            else
+            {
+                System.Media.SystemSounds.Beep.Play();
+            }
         }
 
         private void BtnMultiplicar_Click(object sender, EventArgs e)
         {
-            EnviarTecla(MisKeys.MULTI);
+
+            EnviarTeclaAlPrincipio(MisKeys.MULTI);
+
+
 
         }
 
@@ -150,28 +168,58 @@ namespace Calculadora
 
         private void TxtCuenta_TextChanged(object sender, EventArgs e)
         {
-            
+            ReemplazarSignosJuntos();
+
+            if (TxtCuenta.Text.Length > 0)
+            {
+                foreach (var item in signos)
+                {
+
+
+
+                    if (TxtCuenta.Text[0] == item)
+                    {
+                        errorProvider1.SetError(CartelError, "Cuidado, Tiene un signo incorrecto al principio");
+                    }
+                    else
+                    {
+                        errorProvider1.Clear();
+                    }
+                }
+            }
+        }
+
+        private void ReemplazarSignosJuntos()
+        {
             if (Regex.IsMatch(TxtCuenta.Text, pattern))
             {
-                
+
                 int cursor = TxtCuenta.SelectionStart;
 
 
                 //TxtCuenta.Text = TxtCuenta.Text.Remove(cursor - 2, 1);
                 TxtCuenta.Text = Regex.Replace(TxtCuenta.Text, pattern, elCaracter, RegexOptions.CultureInvariant);
                 TxtCuenta.SelectionStart = cursor - 1;
-                
+
             }
         }
 
         private void TxtCuenta_KeyPress(object sender, KeyPressEventArgs e)
         {
-            // para ingresar * + - / , . 0123456789
+            // para ingresar ( ) * + - / , . 0123456789
 
-             if(e.KeyChar >= 41 && e.KeyChar <= 58)
+            if (e.KeyChar >= 40 && e.KeyChar <= 58)
             {
+
+
                 elCaracter = e.KeyChar.ToString();
+
+
+
                 e.Handled = false;
+
+
+
             }
             else
             {
@@ -198,8 +246,8 @@ namespace Calculadora
             {
                 TxtCuenta.Text = "";
             }
-            
-            
+
+
         }
 
 
@@ -260,7 +308,7 @@ namespace Calculadora
             SendKeys.Send("{BACKSPACE}");
         }
 
-   
+
 
         private void FormMain_Load(object sender, EventArgs e)
         {
