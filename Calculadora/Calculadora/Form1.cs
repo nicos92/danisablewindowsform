@@ -179,10 +179,13 @@ namespace Calculadora
 
                     if (TxtCuenta.Text[0] == item)
                     {
+                        CartelError.Visible = true;
                         errorProvider1.SetError(CartelError, "Cuidado, Tiene un signo incorrecto al principio");
                     }
                     else
                     {
+                        CartelError.Visible = false;
+
                         errorProvider1.Clear();
                     }
                 }
@@ -320,6 +323,11 @@ namespace Calculadora
             svg.Height = new SvgUnit(SvgUnitType.Pixel, 100);
             BtnHistorial.Image = svg.Draw();
             */
+
+        }
+
+        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }

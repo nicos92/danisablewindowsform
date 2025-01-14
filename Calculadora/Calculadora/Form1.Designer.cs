@@ -60,6 +60,9 @@
             this.BtnOff = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.CartelError = new System.Windows.Forms.Label();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.TxtCuenta = new Controles.NSTextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.PanelCenter.SuspendLayout();
@@ -68,6 +71,8 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnHistorial)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnOff)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -168,6 +173,8 @@
             this.imageList1.Images.SetKeyName(7, "calculadora (1).png");
             this.imageList1.Images.SetKeyName(8, "calculadora (2).png");
             this.imageList1.Images.SetKeyName(9, "ce.png");
+            this.imageList1.Images.SetKeyName(10, "advertencia.png");
+            this.imageList1.Images.SetKeyName(11, "error.png");
             // 
             // BtnPunto
             // 
@@ -461,8 +468,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.BtnHistorial);
-            this.panel1.Controls.Add(this.BtnOff);
+            this.panel1.Controls.Add(this.tableLayoutPanel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -476,9 +482,9 @@
             this.BtnHistorial.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnHistorial.Dock = System.Windows.Forms.DockStyle.Right;
             this.BtnHistorial.Image = global::Calculadora.Properties.Resources.history;
-            this.BtnHistorial.Location = new System.Drawing.Point(394, 0);
+            this.BtnHistorial.Location = new System.Drawing.Point(391, 3);
             this.BtnHistorial.Name = "BtnHistorial";
-            this.BtnHistorial.Size = new System.Drawing.Size(40, 40);
+            this.BtnHistorial.Size = new System.Drawing.Size(40, 34);
             this.BtnHistorial.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BtnHistorial.TabIndex = 3;
             this.BtnHistorial.TabStop = false;
@@ -493,9 +499,9 @@
             this.BtnOff.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnOff.Dock = System.Windows.Forms.DockStyle.Left;
             this.BtnOff.Image = global::Calculadora.Properties.Resources.off;
-            this.BtnOff.Location = new System.Drawing.Point(0, 0);
+            this.BtnOff.Location = new System.Drawing.Point(3, 3);
             this.BtnOff.Name = "BtnOff";
-            this.BtnOff.Size = new System.Drawing.Size(40, 40);
+            this.BtnOff.Size = new System.Drawing.Size(40, 34);
             this.BtnOff.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BtnOff.TabIndex = 2;
             this.BtnOff.TabStop = false;
@@ -507,6 +513,38 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            this.errorProvider1.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider1.Icon")));
+            // 
+            // CartelError
+            // 
+            this.CartelError.Dock = System.Windows.Forms.DockStyle.Left;
+            this.CartelError.Location = new System.Drawing.Point(147, 0);
+            this.CartelError.Name = "CartelError";
+            this.CartelError.Size = new System.Drawing.Size(51, 40);
+            this.CartelError.TabIndex = 4;
+            this.CartelError.Text = "      ";
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 3;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.Controls.Add(this.CartelError, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.BtnOff, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.BtnHistorial, 2, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(434, 40);
+            this.tableLayoutPanel2.TabIndex = 5;
+            this.tableLayoutPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel2_Paint);
             // 
             // TxtCuenta
             // 
@@ -553,6 +591,8 @@
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.BtnHistorial)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnOff)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            this.tableLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -591,6 +631,9 @@
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private Controles.NSTextBox TxtCuenta;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Label CartelError;
     }
 }
 
