@@ -58,9 +58,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.BtnHistorial = new System.Windows.Forms.PictureBox();
             this.BtnOff = new System.Windows.Forms.PictureBox();
-            this.TxtCuenta = new System.Windows.Forms.TextBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.TxtCuenta = new Controles.NSTextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.PanelCenter.SuspendLayout();
             this.TablaBotones.SuspendLayout();
@@ -173,7 +173,7 @@
             // 
             this.BtnPunto.Dock = System.Windows.Forms.DockStyle.Fill;
             this.BtnPunto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnPunto.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnPunto.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnPunto.Location = new System.Drawing.Point(221, 317);
             this.BtnPunto.Margin = new System.Windows.Forms.Padding(5);
             this.BtnPunto.Name = "BtnPunto";
@@ -187,7 +187,7 @@
             // 
             this.Btn0.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Btn0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn0.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn0.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn0.Location = new System.Drawing.Point(113, 317);
             this.Btn0.Margin = new System.Windows.Forms.Padding(5);
             this.Btn0.Name = "Btn0";
@@ -201,7 +201,7 @@
             // 
             this.BtnMasMenos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.BtnMasMenos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnMasMenos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnMasMenos.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnMasMenos.Location = new System.Drawing.Point(5, 317);
             this.BtnMasMenos.Margin = new System.Windows.Forms.Padding(5);
             this.BtnMasMenos.Name = "BtnMasMenos";
@@ -230,7 +230,7 @@
             // 
             this.Btn3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Btn3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn3.Location = new System.Drawing.Point(221, 239);
             this.Btn3.Margin = new System.Windows.Forms.Padding(5);
             this.Btn3.Name = "Btn3";
@@ -244,7 +244,7 @@
             // 
             this.Btn2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Btn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn2.Location = new System.Drawing.Point(113, 239);
             this.Btn2.Margin = new System.Windows.Forms.Padding(5);
             this.Btn2.Name = "Btn2";
@@ -258,7 +258,7 @@
             // 
             this.Btn1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Btn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn1.Location = new System.Drawing.Point(5, 239);
             this.Btn1.Margin = new System.Windows.Forms.Padding(5);
             this.Btn1.Name = "Btn1";
@@ -288,7 +288,7 @@
             // 
             this.Btn6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Btn6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn6.Location = new System.Drawing.Point(221, 161);
             this.Btn6.Margin = new System.Windows.Forms.Padding(5);
             this.Btn6.Name = "Btn6";
@@ -302,7 +302,7 @@
             // 
             this.Btn5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Btn5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn5.Location = new System.Drawing.Point(113, 161);
             this.Btn5.Margin = new System.Windows.Forms.Padding(5);
             this.Btn5.Name = "Btn5";
@@ -316,7 +316,7 @@
             // 
             this.Btn4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Btn4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn4.Location = new System.Drawing.Point(5, 161);
             this.Btn4.Margin = new System.Windows.Forms.Padding(5);
             this.Btn4.Name = "Btn4";
@@ -346,7 +346,7 @@
             // 
             this.Btn9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Btn9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn9.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn9.Location = new System.Drawing.Point(221, 83);
             this.Btn9.Margin = new System.Windows.Forms.Padding(5);
             this.Btn9.Name = "Btn9";
@@ -360,7 +360,7 @@
             // 
             this.Btn8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Btn8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn8.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn8.Location = new System.Drawing.Point(113, 83);
             this.Btn8.Margin = new System.Windows.Forms.Padding(5);
             this.Btn8.Name = "Btn8";
@@ -374,7 +374,7 @@
             // 
             this.Btn7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Btn7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn7.Location = new System.Drawing.Point(5, 83);
             this.Btn7.Margin = new System.Windows.Forms.Padding(5);
             this.Btn7.Name = "Btn7";
@@ -421,7 +421,7 @@
             this.BtnC.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.BtnC.Dock = System.Windows.Forms.DockStyle.Fill;
             this.BtnC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnC.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnC.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnC.ImageIndex = 9;
             this.BtnC.Location = new System.Drawing.Point(113, 5);
             this.BtnC.Margin = new System.Windows.Forms.Padding(5);
@@ -437,7 +437,7 @@
             this.BtnCE.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.BtnCE.Dock = System.Windows.Forms.DockStyle.Fill;
             this.BtnCE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCE.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCE.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCE.ImageIndex = 8;
             this.BtnCE.Location = new System.Drawing.Point(5, 5);
             this.BtnCE.Margin = new System.Windows.Forms.Padding(5);
@@ -450,8 +450,8 @@
             // 
             // PanelTop
             // 
-            this.PanelTop.Controls.Add(this.panel1);
             this.PanelTop.Controls.Add(this.TxtCuenta);
+            this.PanelTop.Controls.Add(this.panel1);
             this.PanelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelTop.Location = new System.Drawing.Point(0, 0);
             this.PanelTop.Name = "PanelTop";
@@ -504,22 +504,32 @@
             this.BtnOff.MouseLeave += new System.EventHandler(this.BtnOff_MouseLeave);
             this.BtnOff.MouseHover += new System.EventHandler(this.BtnOff_MouseHover);
             // 
-            // TxtCuenta
-            // 
-            this.TxtCuenta.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.TxtCuenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtCuenta.Location = new System.Drawing.Point(0, 45);
-            this.TxtCuenta.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
-            this.TxtCuenta.MaxLength = 15;
-            this.TxtCuenta.Name = "TxtCuenta";
-            this.TxtCuenta.Size = new System.Drawing.Size(434, 62);
-            this.TxtCuenta.TabIndex = 0;
-            this.TxtCuenta.TextChanged += new System.EventHandler(this.TxtCuenta_TextChanged);
-            this.TxtCuenta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCuenta_KeyPress);
-            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // TxtCuenta
+            // 
+            this.TxtCuenta.BackColor = System.Drawing.SystemColors.Window;
+            this.TxtCuenta.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.TxtCuenta.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.TxtCuenta.BorderSize = 2;
+            this.TxtCuenta.CantCaracteres = 15;
+            this.TxtCuenta.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TxtCuenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtCuenta.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.TxtCuenta.Location = new System.Drawing.Point(0, 40);
+            this.TxtCuenta.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtCuenta.Multiline = false;
+            this.TxtCuenta.Name = "TxtCuenta";
+            this.TxtCuenta.Padding = new System.Windows.Forms.Padding(7, 12, 7, 7);
+            this.TxtCuenta.PasswordChar = false;
+            this.TxtCuenta.SelectionStart = 0;
+            this.TxtCuenta.Size = new System.Drawing.Size(434, 67);
+            this.TxtCuenta.TabIndex = 2;
+            this.TxtCuenta.UnderLinesStyle = false;
+            this.TxtCuenta._TextChanged += new System.EventHandler(this.TxtCuenta_TextChanged);
+            this.TxtCuenta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCuenta_KeyPress);
             // 
             // FormMain
             // 
@@ -540,7 +550,6 @@
             this.PanelCenter.ResumeLayout(false);
             this.TablaBotones.ResumeLayout(false);
             this.PanelTop.ResumeLayout(false);
-            this.PanelTop.PerformLayout();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.BtnHistorial)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnOff)).EndInit();
@@ -575,13 +584,13 @@
         private System.Windows.Forms.Button BtnDividir;
         private System.Windows.Forms.Button BtnBorrar;
         private System.Windows.Forms.Button BtnC;
-        private System.Windows.Forms.TextBox TxtCuenta;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.PictureBox BtnOff;
         private System.Windows.Forms.PictureBox BtnHistorial;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private Controles.NSTextBox TxtCuenta;
     }
 }
 

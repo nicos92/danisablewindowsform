@@ -156,7 +156,7 @@ namespace Calculadora
                 
                 int cursor = TxtCuenta.SelectionStart;
 
-
+                
                 //TxtCuenta.Text = TxtCuenta.Text.Remove(cursor - 2, 1);
                 TxtCuenta.Text = Regex.Replace(TxtCuenta.Text, pattern, elCaracter, RegexOptions.CultureInvariant);
                 TxtCuenta.SelectionStart = cursor - 1;
