@@ -56,23 +56,23 @@
             this.BtnCE = new System.Windows.Forms.Button();
             this.PanelTop = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.BtnHistorial = new System.Windows.Forms.PictureBox();
-            this.BtnOff = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.CartelError = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.TxtCuenta = new Controles.NSTextBox();
+            this.BtnHistorial = new Controles.NSCircularPictureBox();
+            this.BtnOff = new Controles.NSCircularPictureBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.PanelCenter.SuspendLayout();
             this.TablaBotones.SuspendLayout();
             this.PanelTop.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BtnHistorial)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BtnOff)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnHistorial)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnOff)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -475,41 +475,6 @@
             this.panel1.Size = new System.Drawing.Size(434, 40);
             this.panel1.TabIndex = 1;
             // 
-            // BtnHistorial
-            // 
-            this.BtnHistorial.BackColor = System.Drawing.Color.Transparent;
-            this.BtnHistorial.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BtnHistorial.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnHistorial.Dock = System.Windows.Forms.DockStyle.Right;
-            this.BtnHistorial.Image = global::Calculadora.Properties.Resources.history;
-            this.BtnHistorial.Location = new System.Drawing.Point(391, 3);
-            this.BtnHistorial.Name = "BtnHistorial";
-            this.BtnHistorial.Size = new System.Drawing.Size(40, 34);
-            this.BtnHistorial.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.BtnHistorial.TabIndex = 3;
-            this.BtnHistorial.TabStop = false;
-            this.toolTip1.SetToolTip(this.BtnHistorial, "Historial");
-            this.BtnHistorial.MouseLeave += new System.EventHandler(this.BtnHistorial_MouseLeave);
-            this.BtnHistorial.MouseHover += new System.EventHandler(this.BtnHistorial_MouseHover);
-            // 
-            // BtnOff
-            // 
-            this.BtnOff.BackColor = System.Drawing.Color.Transparent;
-            this.BtnOff.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BtnOff.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnOff.Dock = System.Windows.Forms.DockStyle.Left;
-            this.BtnOff.Image = global::Calculadora.Properties.Resources.off;
-            this.BtnOff.Location = new System.Drawing.Point(3, 3);
-            this.BtnOff.Name = "BtnOff";
-            this.BtnOff.Size = new System.Drawing.Size(40, 34);
-            this.BtnOff.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.BtnOff.TabIndex = 2;
-            this.BtnOff.TabStop = false;
-            this.toolTip1.SetToolTip(this.BtnOff, "Apagar");
-            this.BtnOff.Click += new System.EventHandler(this.BtnOff_Click);
-            this.BtnOff.MouseLeave += new System.EventHandler(this.BtnOff_MouseLeave);
-            this.BtnOff.MouseHover += new System.EventHandler(this.BtnOff_MouseHover);
-            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
@@ -524,7 +489,7 @@
             this.CartelError.Dock = System.Windows.Forms.DockStyle.Left;
             this.CartelError.Location = new System.Drawing.Point(147, 0);
             this.CartelError.Name = "CartelError";
-            this.CartelError.Size = new System.Drawing.Size(51, 40);
+            this.CartelError.Size = new System.Drawing.Size(45, 40);
             this.CartelError.TabIndex = 4;
             this.CartelError.Text = "      ";
             // 
@@ -534,8 +499,8 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel2.Controls.Add(this.CartelError, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.BtnOff, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.CartelError, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.BtnHistorial, 2, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
@@ -569,6 +534,47 @@
             this.TxtCuenta._TextChanged += new System.EventHandler(this.TxtCuenta_TextChanged);
             this.TxtCuenta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCuenta_KeyPress);
             // 
+            // BtnHistorial
+            // 
+            this.BtnHistorial.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.BtnHistorial.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.BtnHistorial.BorderColor2 = System.Drawing.Color.HotPink;
+            this.BtnHistorial.BorderLinestyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.BtnHistorial.BorderSize = 2;
+            this.BtnHistorial.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnHistorial.Dock = System.Windows.Forms.DockStyle.Right;
+            this.BtnHistorial.GradientAngle = 50F;
+            this.BtnHistorial.Image = global::Calculadora.Properties.Resources.history;
+            this.BtnHistorial.Location = new System.Drawing.Point(399, 3);
+            this.BtnHistorial.Name = "BtnHistorial";
+            this.BtnHistorial.Size = new System.Drawing.Size(32, 32);
+            this.BtnHistorial.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.BtnHistorial.TabIndex = 1;
+            this.BtnHistorial.TabStop = false;
+            this.BtnHistorial.MouseLeave += new System.EventHandler(this.BtnHistorial_MouseLeave);
+            this.BtnHistorial.MouseHover += new System.EventHandler(this.BtnHistorial_MouseHover);
+            // 
+            // BtnOff
+            // 
+            this.BtnOff.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.BtnOff.BorderColor = System.Drawing.Color.Red;
+            this.BtnOff.BorderColor2 = System.Drawing.Color.DimGray;
+            this.BtnOff.BorderLinestyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.BtnOff.BorderSize = 2;
+            this.BtnOff.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnOff.Dock = System.Windows.Forms.DockStyle.Left;
+            this.BtnOff.GradientAngle = 50F;
+            this.BtnOff.Image = global::Calculadora.Properties.Resources.off;
+            this.BtnOff.Location = new System.Drawing.Point(3, 3);
+            this.BtnOff.Name = "BtnOff";
+            this.BtnOff.Size = new System.Drawing.Size(32, 32);
+            this.BtnOff.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.BtnOff.TabIndex = 5;
+            this.BtnOff.TabStop = false;
+            this.BtnOff.Click += new System.EventHandler(this.BtnOff_Click);
+            this.BtnOff.MouseLeave += new System.EventHandler(this.BtnOff_MouseLeave);
+            this.BtnOff.MouseHover += new System.EventHandler(this.BtnOff_MouseHover);
+            // 
             // FormMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -589,10 +595,10 @@
             this.TablaBotones.ResumeLayout(false);
             this.PanelTop.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.BtnHistorial)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BtnOff)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.BtnHistorial)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnOff)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -626,14 +632,14 @@
         private System.Windows.Forms.Button BtnC;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.PictureBox BtnOff;
-        private System.Windows.Forms.PictureBox BtnHistorial;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private Controles.NSTextBox TxtCuenta;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label CartelError;
+        private Controles.NSCircularPictureBox BtnHistorial;
+        private Controles.NSCircularPictureBox BtnOff;
     }
 }
 

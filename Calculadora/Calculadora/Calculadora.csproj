@@ -57,6 +57,9 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="MisKeys.cs" />
+    <Compile Include="NSCircularPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="NSTextBox.cs">
       <SubType>UserControl</SubType>
     </Compile>

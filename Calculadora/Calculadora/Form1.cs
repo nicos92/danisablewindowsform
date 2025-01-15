@@ -272,12 +272,15 @@ namespace Calculadora
         private void BtnHistorial_MouseHover(object sender, EventArgs e)
         {
             BtnHistorial.Image = Properties.Resources.history1;
+            BtnHistorial.Size = new Size(34,34);
 
         }
 
         private void BtnHistorial_MouseLeave(object sender, EventArgs e)
         {
             BtnHistorial.Image = Properties.Resources.history;
+            BtnHistorial.Size = new Size(32,32);
+
 
         }
 
